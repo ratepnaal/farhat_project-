@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Farhat Savings Center",
+    "tagline": "Your First Destination for Savings in Al-Zahira!",
+    "cta": "Explore Our Services"
+  },
+  "about": {
+    "title": "Our Story in the Heart of Damascus",
+    "content": "Located in the vibrant neighborhood of Al-Zahira, Farhat Savings Center has been serving our community with quality groceries, fresh detergents, and delicious bakery items. We also provide convenient bill payment services and accept card payments through Fattoura. Our commitment to quality and savings makes us your trusted partner for all your daily needs."
+  },
+  "services": {
+    "title": "Our Comprehensive Services",
+    "items": [
+      {
+        "title": "Groceries",
+        "description": "Fresh and quality grocery items for your daily needs"
+      },
+      {
+        "title": "Detergents",
+        "description": "Wide selection of cleaning and laundry products"
+      },
+      {
+        "title": "Bakery",
+        "description": "Fresh bread and pastries baked daily"
+      },
+      {
+        "title": "Bill Payments",
+        "description": "Convenient bill payment services"
+      },
+      {
+        "title": "Wholesale Deals",
+        "description": "Special prices for bulk purchases"
+      },
+      {
+        "title": "Free Local Delivery",
+        "description": "Free delivery within Al-Zahira area"
+      },
+      {
+        "title": "Damascus-wide Delivery",
+        "description": "City-wide delivery via Bee Order"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "address": "Al-Zahira, Damascus, Syria",
+    "phone": "+963-11-1234567",
+    "hours": "Open Daily: 7:00 AM - 10:00 PM",
+    "social": {
+      "whatsapp": "Chat on WhatsApp",
+      "facebook": "Follow us on Facebook",
+      "instagram": "Follow us on Instagram"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Farhat Savings Center. All rights reserved.",
+    "poweredBy": "Powered by Next.js"
+  }
+} 
