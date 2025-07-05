@@ -1,7 +1,10 @@
 {
   "nav": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
+    "offers": "Offers",
+    "careers": "Careers",
     "contact": "Contact"
   },
   "hero": {
@@ -12,6 +15,32 @@
   "about": {
     "title": "Our Story in the Heart of Damascus",
     "content": "Located in the vibrant neighborhood of Al-Zahira, Farhat Savings Center has been serving our community with quality groceries, fresh detergents, and delicious bakery items. We also provide convenient bill payment services and accept card payments through Fattoura. Our commitment to quality and savings makes us your trusted partner for all your daily needs."
+  },
+  "weeklyOffers": {
+    "title": "Our Special Offers This Week",
+    "subtitle": "Don't miss out on these amazing deals!",
+    "viewAll": "View All Offers",
+    "addToCart": "Add to Cart"
+  },
+  "careers": {
+    "title": "Join the Farhat Center Team",
+    "subtitle": "Be part of a dynamic team that serves our community with dedication and excellence",
+    "workEnvironment": {
+      "title": "Our Work Environment",
+      "description": "At Farhat Savings Center, we believe in creating a supportive and inclusive work environment where every team member can grow and thrive. We value hard work, customer service excellence, and a commitment to our community. Join us in making a difference in the lives of our customers while building your career in a fast-paced, rewarding retail environment."
+    },
+    "form": {
+      "title": "Apply Now",
+      "subtitle": "Fill out the form below and we'll get back to you soon",
+      "fullName": "Full Name *",
+      "fullNamePlaceholder": "Enter your full name",
+      "phone": "Phone Number *",
+      "phonePlaceholder": "Enter your phone number",
+      "about": "Tell us about yourself and why you want to join us *",
+      "aboutPlaceholder": "Tell us about your experience, skills, and why you'd like to join our team...",
+      "submit": "Submit Application",
+      "successMessage": "Thank you for your application! We will contact you soon."
+    }
   },
   "services": {
     "title": "Our Comprehensive Services",
@@ -46,6 +75,10 @@
       }
     ]
   },
+  "offers": {
+    "title": "Our Offers",
+    "subtitle": "Check out our latest deals and discounts!"
+  },
   "contact": {
     "title": "Get in Touch",
     "address": "Al-Zahira, Damascus, Syria",
@@ -59,6 +92,10 @@
   },
   "footer": {
     "copyright": "© 2024 Farhat Savings Center. All rights reserved.",
-    "poweredBy": "Powered by Next.js"
+    "poweredBy": "Powered by Next.js",
+    "careers": "Careers",
+    "offers": "Offers",
+    "about": "About",
+    "contact": "Contact"
   }
 } 

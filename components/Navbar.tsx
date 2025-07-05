@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { getTranslations, getDirection, type Locale } from '@/lib/translations'
@@ -13,6 +15,7 @@ interface NavbarProps {
 export function Navbar({ locale }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
   const t = getTranslations(locale)
   const dir = getDirection(locale)
 
@@ -24,12 +27,8 @@ export function Navbar({ locale }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-    setIsMenuOpen(false)
+  const isActive = (path: string) => {
+    return pathname === path || pathname === `/${locale}${path}`
   }
 
   return (
@@ -45,31 +44,55 @@ export function Navbar({ locale }: NavbarProps) {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-gradient">
-              {locale === 'ar' ? 'سنتر فرحات' : 'Farhat Center'}
-            </h1>
+            <Link href={locale === 'ar' ? '/ar' : '/en'}>
+              <h1 className="text-xl font-bold text-gradient">
+                {locale === 'ar' ? 'سنتر فرحات' : 'Farhat Center'}
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+            <Link
+              href={locale === 'ar' ? '/ar' : '/en'}
+              className={`transition-colors duration-200 ${
+                isActive('') 
+                  ? 'text-primary-600 dark:text-primary-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+              }`}
+            >
+              {locale === 'ar' ? 'الرئيسية' : 'Home'}
+            </Link>
+            <Link
+              href={locale === 'ar' ? '/ar/offers' : '/en/offers'}
+              className={`transition-colors duration-200 ${
+                isActive('/offers') 
+                  ? 'text-primary-600 dark:text-primary-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+              }`}
+            >
+              {locale === 'ar' ? 'العروض' : 'Offers'}
+            </Link>
+            <Link
+              href={locale === 'ar' ? '/ar/about' : '/en/about'}
+              className={`transition-colors duration-200 ${
+                isActive('/about') 
+                  ? 'text-primary-600 dark:text-primary-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+              }`}
             >
               {t.nav.about}
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-            >
-              {t.nav.services}
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+            </Link>
+            <Link
+              href={locale === 'ar' ? '/ar/contact' : '/en/contact'}
+              className={`transition-colors duration-200 ${
+                isActive('/contact') 
+                  ? 'text-primary-600 dark:text-primary-400' 
+                  : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+              }`}
             >
               {t.nav.contact}
-            </button>
+            </Link>
           </div>
 
           {/* Desktop Controls */}
@@ -96,24 +119,50 @@ export function Navbar({ locale }: NavbarProps) {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-left text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              <Link
+                href={locale === 'ar' ? '/ar' : '/en'}
+                className={`text-left transition-colors duration-200 ${
+                  isActive('') 
+                    ? 'text-primary-600 dark:text-primary-400' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {locale === 'ar' ? 'الرئيسية' : 'Home'}
+              </Link>
+              <Link
+                href={locale === 'ar' ? '/ar/offers' : '/en/offers'}
+                className={`text-left transition-colors duration-200 ${
+                  isActive('/offers') 
+                    ? 'text-primary-600 dark:text-primary-400' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {locale === 'ar' ? 'العروض' : 'Offers'}
+              </Link>
+              <Link
+                href={locale === 'ar' ? '/ar/about' : '/en/about'}
+                className={`text-left transition-colors duration-200 ${
+                  isActive('/about') 
+                    ? 'text-primary-600 dark:text-primary-400' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {t.nav.about}
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
-              >
-                {t.nav.services}
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              </Link>
+              <Link
+                href={locale === 'ar' ? '/ar/contact' : '/en/contact'}
+                className={`text-left transition-colors duration-200 ${
+                  isActive('/contact') 
+                    ? 'text-primary-600 dark:text-primary-400' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {t.nav.contact}
-              </button>
+              </Link>
             </div>
           </div>
         )}
