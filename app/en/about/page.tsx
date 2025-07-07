@@ -11,8 +11,12 @@ import {
   ShoppingCart,
   Truck,
   Clock,
-  Star
+  Star,
+  ShieldCheck,
+  Coins,
+  HeartHandshake
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function AboutPage() {
   const locale: Locale = 'en'
@@ -75,13 +79,10 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {locale === 'ar' ? 'من نحن' : 'About Us'}
+              {'About Us'}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              {locale === 'ar' 
-                ? 'قصتنا في خدمة مجتمع الزاهرة منذ أكثر من 15 عاماً'
-                : 'Our story in serving the Al-Zahira community for over 15 years'
-              }
+              {'Our story in serving the Al-Zahira community for over 15 years'}
             </p>
           </div>
         </div>
@@ -93,26 +94,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
-                {locale === 'ar' ? 'قصتنا' : 'Our Story'}
+                {'Our Story'}
               </h2>
               <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
                 <p>
-                  {locale === 'ar'
-                    ? 'بدأت رحلتنا في عام 2008 في قلب حي الزاهرة بدمشق، حيث بدأنا كمتجر صغير للبقالة مع رؤية واضحة لتقديم أفضل المنتجات والخدمات لمجتمعنا المحلي.'
-                    : 'Our journey began in 2008 in the heart of Al-Zahira neighborhood in Damascus, where we started as a small grocery store with a clear vision to provide the best products and services to our local community.'
-                  }
+                  {'Our journey began in 2008 in the heart of Al-Zahira neighborhood in Damascus, where we started as a small grocery store with a clear vision to provide the best products and services to our local community.'}
                 </p>
                 <p>
-                  {locale === 'ar'
-                    ? 'على مر السنين، تطورنا من متجر بقالة بسيط إلى مركز شامل للتوفير يقدم مجموعة واسعة من المنتجات والخدمات، بما في ذلك المواد الغذائية والمنظفات والمخبوزات وخدمات دفع الفواتير.'
-                    : 'Over the years, we have evolved from a simple grocery store to a comprehensive savings center offering a wide range of products and services, including groceries, detergents, bakery items, and bill payment services.'
-                  }
+                  {'Over the years, we have evolved from a simple grocery store to a comprehensive savings center offering a wide range of products and services, including groceries, detergents, bakery items, and bill payment services.'}
                 </p>
                 <p>
-                  {locale === 'ar'
-                    ? 'نفخر بكوننا جزءاً من مجتمع الزاهرة ونسعى دائماً لتطوير خدماتنا لتلبية احتياجات عملائنا المتزايدة.'
-                    : 'We are proud to be part of the Al-Zahira community and always strive to develop our services to meet our customers\' growing needs.'
-                  }
+                  {'We are proud to be part of the Al-Zahira community and always strive to develop our services to meet our customers\' growing needs.'}
                 </p>
               </div>
             </div>
@@ -139,13 +131,10 @@ export default function AboutPage() {
                 <Target className="w-10 h-10 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {locale === 'ar' ? 'مهمتنا' : 'Our Mission'}
+                {'Our Mission'}
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                {locale === 'ar'
-                  ? 'تقديم منتجات عالية الجودة وخدمات متميزة بأسعار تنافسية، مع التركيز على رضا العملاء وتطوير مجتمعنا المحلي.'
-                  : 'To provide high-quality products and excellent services at competitive prices, with a focus on customer satisfaction and the development of our local community.'
-                }
+                {'To provide high-quality products and excellent services at competitive prices, with a focus on customer satisfaction and the development of our local community.'}
               </p>
             </div>
             <div className="text-center">
@@ -153,13 +142,10 @@ export default function AboutPage() {
                 <Award className="w-10 h-10 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {locale === 'ar' ? 'رؤيتنا' : 'Our Vision'}
+                {'Our Vision'}
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                {locale === 'ar'
-                  ? 'أن نكون الخيار الأول للتسوق في منطقة الزاهرة، معروفين بجودة منتجاتنا وخدمة عملائنا المتميزة.'
-                  : 'To be the first choice for shopping in the Al-Zahira area, known for our product quality and excellent customer service.'
-                }
+                {'To be the first choice for shopping in the Al-Zahira area, known for our product quality and excellent customer service.'}
               </p>
             </div>
           </div>
@@ -171,13 +157,10 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {locale === 'ar' ? 'قيمنا' : 'Our Values'}
+              {'Our Values'}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {locale === 'ar' 
-                ? 'القيم التي تقود أعمالنا وعلاقاتنا مع العملاء'
-                : 'The values that guide our business and customer relationships'
-              }
+              {'The values that guide our business and customer relationships'}
             </p>
           </div>
 
@@ -204,7 +187,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {locale === 'ar' ? 'إحصائياتنا' : 'Our Statistics'}
+              {'Our Statistics'}
             </h2>
           </div>
 
@@ -226,26 +209,53 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Our Departments Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient text-center">Our Departments</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {[
+              { name: 'Canned & Legumes', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80', alt: 'Canned goods and legumes section' },
+              { name: 'Detergents & Home Supplies', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80', alt: 'Detergents and home cleaning supplies' },
+              { name: 'Dairy Products', img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: 'Fresh dairy products and cheese' },
+              { name: 'Bakery', img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: 'Fresh bakery items and bread' },
+              { name: 'Beverages', img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80', alt: 'Various beverages and drinks' },
+              { name: 'Snacks', img: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80', alt: 'Snacks and packaged foods' }
+            ].map((dept, idx) => (
+              <div key={idx} className="relative rounded-lg overflow-hidden shadow-lg group h-56">
+                <Image src={dept.img} alt={dept.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <span className="text-white text-xl font-bold drop-shadow-lg">{dept.name}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us? */}
       <section className="py-16 bg-gradient-to-r from-primary-600 to-secondary-600">
         <div className="container-custom">
-          <div className="text-center text-white">
+          <div className="text-center text-white mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {locale === 'ar' ? 'انضم إلى عائلتنا' : 'Join Our Family'}
+              {t.chooseUs.title}
             </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              {locale === 'ar'
-                ? 'نرحب بك لزيارة متجرنا واكتشاف الفرق الذي نقدمه'
-                : 'We welcome you to visit our store and discover the difference we make'
-              }
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-secondary bg-white text-primary-600 hover:bg-gray-100">
-                {locale === 'ar' ? 'زيارة المتجر' : 'Visit Store'}
-              </button>
-              <button className="btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-primary-600">
-                {locale === 'ar' ? 'تواصل معنا' : 'Contact Us'}
-              </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <ShieldCheck className="mx-auto w-14 h-14 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.qualityTitle}</h3>
+              <p>{t.chooseUs.qualityDesc}</p>
+            </div>
+            <div className="text-center">
+              <Coins className="mx-auto w-14 h-14 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.savingsTitle}</h3>
+              <p>{t.chooseUs.savingsDesc}</p>
+            </div>
+            <div className="text-center">
+              <HeartHandshake className="mx-auto w-14 h-14 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.serviceTitle}</h3>
+              <p>{t.chooseUs.serviceDesc}</p>
             </div>
           </div>
         </div>

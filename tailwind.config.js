@@ -9,29 +9,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // The warm red from the logo background
+        'brand-red': '#D32F2F',
+        // The golden yellow from the smile accent
+        'brand-yellow': '#E4B460',
+        // The creamy off-white from the text
+        'brand-cream': '#F3EFE0',
+        // A dark text color for light backgrounds
+        'brand-dark': '#2C2A2A',
+        // Extended palette for consistency
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          DEFAULT: '#D32F2F', // brand-red
+          light: '#E57373',
+          dark: '#B71C1C',
         },
-        secondary: {
-          50: '#fdf4ff',
-          100: '#fae8ff',
-          200: '#f5d0fe',
-          300: '#f0abfc',
-          400: '#e879f9',
-          500: '#d946ef',
-          600: '#c026d3',
-          700: '#a21caf',
-          800: '#86198f',
-          900: '#701a75',
+        accent: {
+          DEFAULT: '#E4B460', // brand-yellow
+          light: '#FFD54F',
+          dark: '#AF8C4F',
         },
       },
       fontFamily: {

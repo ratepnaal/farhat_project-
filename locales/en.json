@@ -77,13 +77,68 @@
   },
   "offers": {
     "title": "Our Offers",
-    "subtitle": "Check out our latest deals and discounts!"
+    "subtitle": "Check out our latest deals and discounts!",
+    "hero": {
+      "title": "Weekly Offers",
+      "subtitle": "Discover the best exclusive offers and discounts"
+    },
+    "featured": {
+      "title": "Featured Products",
+      "subtitle": "Discover a wide range of high-quality products at special prices"
+    },
+    "delivery": {
+      "title": "Free Delivery",
+      "description": "On all orders above 50,000 SYP within Al-Zahira and nearby areas."
+    },
+    "buy2get1": {
+      "title": "Buy 2 Get 1",
+      "description": "On all fresh bakery products. Mix & match your favorites!"
+    },
+    "discount15": {
+      "title": "15% Discount",
+      "description": "On all essential grocery items. Save more every week!"
+    },
+    "viewDetails": "View Details",
+    "limitedTime": "Limited Time!",
+    "joinWhatsApp": "Join Our Offers Group on WhatsApp",
+    "getOffer": "Get Offer",
+    "specialOffers": "Special Offers",
+    "subscribers": {
+      "title": "Special Offers for Subscribers",
+      "subtitle": "Subscribe to our newsletter and get exclusive offers and priority notifications",
+      "emailPlaceholder": "Email address",
+      "subscribe": "Subscribe"
+    },
+    "detergents": {
+      "title": "20% Off All Detergents",
+      "description": "Special discount on all types of detergents and liquid cleaners",
+      "validUntil": "Valid until Dec 31",
+      "category": "Detergents"
+    },
+    "bakery": {
+      "title": "Buy 2 Get 1 Free",
+      "description": "On all fresh bakery products",
+      "validUntil": "Valid until Jan 15",
+      "category": "Bakery"
+    },
+    "groceries": {
+      "title": "15% Off Groceries",
+      "description": "Discount on all essential grocery items",
+      "validUntil": "Valid until Jan 20",
+      "category": "Groceries"
+    },
+    "delivery": {
+      "title": "Free Delivery on Large Orders",
+      "description": "Free delivery for orders over 50,000 SYP",
+      "validUntil": "Ongoing",
+      "category": "Delivery"
+    }
   },
   "contact": {
     "title": "Get in Touch",
     "address": "Al-Zahira, Damascus, Syria",
     "phone": "+963-11-1234567",
-    "hours": "Open Daily: 7:00 AM - 10:00 PM",
+    "hours": "Sat - Thu: 10:00 AM - 11:00 PM | Fri: 4:00 PM - 11:00 PM",
     "social": {
       "whatsapp": "Chat on WhatsApp",
       "facebook": "Follow us on Facebook",

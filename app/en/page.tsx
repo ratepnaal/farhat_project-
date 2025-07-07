@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Navbar } from '@/components/Navbar'
-import { getTranslations, getDirection, type Locale } from '@/lib/translations'
+import { PageWrapper } from '@/components/PageWrapper'
+import { getTranslations, type Locale } from '@/lib/translations'
 import { 
   ShoppingCart, 
   Droplets, 
@@ -19,11 +19,11 @@ import {
   Instagram,
   ArrowRight
 } from 'lucide-react'
+import { FeaturedProducts } from '@/components/FeaturedProducts'
 
 export default function EnglishPage() {
   const locale: Locale = 'en'
   const t = getTranslations(locale)
-  const dir = getDirection(locale)
 
   const services = [
     { icon: ShoppingCart, title: t.services.items[0].title, description: t.services.items[0].description },
@@ -71,18 +71,18 @@ export default function EnglishPage() {
   ]
 
   return (
-    <div className="min-h-screen" dir={dir}>
-      <Navbar locale={locale} />
+    <PageWrapper locale={locale}>
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+            src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             alt="Modern grocery store interior with shelves of products"
             fill
             className="object-cover"
             priority
+            quality={75}
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -102,6 +102,8 @@ export default function EnglishPage() {
           </button>
         </div>
       </section>
+
+      <FeaturedProducts />
 
       {/* About Section */}
       <section id="about" className="section-padding bg-gray-50 dark:bg-gray-800">
@@ -142,6 +144,7 @@ export default function EnglishPage() {
                     alt={offer.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    quality={75}
                   />
                   <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
                     {offer.discount}
@@ -165,9 +168,14 @@ export default function EnglishPage() {
                     </div>
                   </div>
 
-                  <button className="w-full mt-4 btn-primary text-sm py-2">
-                    {t.weeklyOffers.addToCart}
-                  </button>
+                  <a
+                    href={`https://wa.me/963111234567?text=Hello, I would like to order the offer: ${encodeURIComponent(offer.name)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center"
+                  >
+                    Order Now
+                  </a>
                 </div>
               </div>
             ))}
@@ -202,7 +210,7 @@ export default function EnglishPage() {
                 className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-lg mb-4 mx-auto">
-                  <service.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+                  <service.icon className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-center">
                   {service.title}
@@ -231,7 +239,7 @@ export default function EnglishPage() {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div>
+                  <div className="ms-3">
                     <h3 className="font-semibold mb-1">Address</h3>
                     <p className="text-gray-600 dark:text-gray-400">{t.contact.address}</p>
                   </div>
@@ -239,7 +247,7 @@ export default function EnglishPage() {
                 
                 <div className="flex items-start space-x-4">
                   <Phone className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div>
+                  <div className="ms-3">
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <p className="text-gray-600 dark:text-gray-400">{t.contact.phone}</p>
                   </div>
@@ -247,7 +255,7 @@ export default function EnglishPage() {
                 
                 <div className="flex items-start space-x-4">
                   <Clock className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div>
+                  <div className="ms-3">
                     <h3 className="font-semibold mb-1">Hours</h3>
                     <p className="text-gray-600 dark:text-gray-400">{t.contact.hours}</p>
                   </div>
@@ -294,16 +302,6 @@ export default function EnglishPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container-custom text-center">
-          <p className="mb-2">{t.footer.copyright}</p>
-          <p className="text-gray-400 text-sm">{t.footer.poweredBy}</p>
-          <p className="mt-2">
-            <Link href="/en/careers" className="underline hover:text-primary-400 transition-colors">{t.footer.careers}</Link>
-          </p>
-        </div>
-      </footer>
-    </div>
+    </PageWrapper>
   )
 } 

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import LayoutClient from '@/components/LayoutClient'
+import { ProductModal } from '@/components/ProductModal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -85,7 +87,8 @@ export default function RootLayout({
                 "longitude": "36.2765"
               },
               "openingHours": [
-                "Mo-Su 07:00-22:00"
+                "Sa-Th 10:00-23:00",
+                "Fr 16:00-23:00"
               ],
               "priceRange": "$$",
               "paymentAccepted": ["Cash", "Credit Card", "Fattoura"],
@@ -132,7 +135,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <LayoutClient>
+            {children}
+          </LayoutClient>
+          <ProductModal />
         </ThemeProvider>
       </body>
     </html>

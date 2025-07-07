@@ -29,11 +29,13 @@ export function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
+        className="flex items-center gap-x-2 px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-200"
         aria-label="Select language"
       >
-        <Globe className="w-4 h-4" />
-        <span className="font-medium">{currentLanguage.native}</span>
+        <div className="flex items-center gap-x-2">
+          <Globe className="w-4 h-4" />
+          <span className="font-medium">{currentLanguage.native}</span>
+        </div>
         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
