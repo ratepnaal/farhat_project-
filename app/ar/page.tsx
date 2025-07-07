@@ -40,7 +40,7 @@ export default function ArabicPage() {
     {
       id: 1,
       name: "زيت زيتون مميز",
-      image_url: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeUXiAMYaNdPXUfh5TxRDAU8ZkxT-Odh4T2w&s",
       old_price: 85000,
       new_price: 68000,
       discount: "20%"
@@ -161,10 +161,10 @@ export default function ArabicPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                        {offer.old_price.toLocaleString()} ل.س
+                        {offer.old_price.toLocaleString('ar-EG')} ل.س
                       </span>
                       <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {offer.new_price.toLocaleString()} ل.س
+                        {offer.new_price.toLocaleString('ar-EG')} ل.س
                       </span>
                     </div>
                   </div>
@@ -238,25 +238,25 @@ export default function ArabicPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Contact Info */}
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start gap-x-3">
                   <MapPin className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div className="ms-3">
+                  <div>
                     <h3 className="font-semibold mb-1">العنوان</h3>
                     <p className="text-gray-600 dark:text-gray-400">{t.contact.address}</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start gap-x-3">
                   <Phone className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div className="ms-3">
+                  <div>
                     <h3 className="font-semibold mb-1">الهاتف</h3>
-                    <p className="text-gray-600 dark:text-gray-400">{t.contact.phone}</p>
+                    <p className="text-gray-600 dark:text-gray-400">+963945712929</p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start gap-x-3">
                   <Clock className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
-                  <div className="ms-3">
+                  <div>
                     <h3 className="font-semibold mb-1">ساعات العمل</h3>
                     <p className="text-gray-600 dark:text-gray-400">{t.contact.hours}</p>
                   </div>
@@ -271,7 +271,7 @@ export default function ArabicPage() {
                     href="https://wa.me/963111234567"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
+                    className="flex items-center justify-center gap-x-3 p-4 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors duration-200"
                   >
                     <MessageCircle className="w-6 h-6" />
                     <span>{t.contact.social.whatsapp}</span>
@@ -281,7 +281,7 @@ export default function ArabicPage() {
                     href="https://facebook.com/farhatsavingscenter"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
+                    className="flex items-center justify-center gap-x-3 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
                   >
                     <Facebook className="w-6 h-6" />
                     <span>{t.contact.social.facebook}</span>
@@ -291,7 +291,7 @@ export default function ArabicPage() {
                     href="https://instagram.com/farhatsavingscenter"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transition-colors duration-200"
+                    className="flex items-center justify-center gap-x-3 p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transition-colors duration-200"
                   >
                     <Instagram className="w-6 h-6" />
                     <span>{t.contact.social.instagram}</span>

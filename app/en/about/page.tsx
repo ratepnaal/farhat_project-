@@ -26,46 +26,40 @@ export default function AboutPage() {
   const values = [
     {
       icon: Heart,
-      title: locale === 'ar' ? 'الجودة' : 'Quality',
-      description: locale === 'ar'
-        ? 'نلتزم بتقديم أفضل المنتجات والخدمات لعملائنا'
-        : 'We are committed to providing the best products and services to our customers'
+      title: 'Quality',
+      description: 'We are committed to providing the best products and services to our customers'
     },
     {
       icon: Target,
-      title: locale === 'ar' ? 'الموثوقية' : 'Reliability',
-      description: locale === 'ar'
-        ? 'عملاؤنا يثقون بنا لتلبية احتياجاتهم اليومية'
-        : 'Our customers trust us to meet their daily needs'
+      title: 'Reliability',
+      description: 'Our customers trust us to meet their daily needs'
     },
     {
       icon: Award,
-      title: locale === 'ar' ? 'التميز' : 'Excellence',
-      description: locale === 'ar'
-        ? 'نسعى دائماً للتميز في كل ما نقوم به'
-        : 'We always strive for excellence in everything we do'
+      title: 'Excellence',
+      description: 'We always strive for excellence in everything we do'
     }
   ]
 
   const stats = [
     {
       number: '15+',
-      label: locale === 'ar' ? 'سنوات من الخبرة' : 'Years of Experience',
+      label: 'Years of Experience',
       icon: Clock
     },
     {
       number: '10,000+',
-      label: locale === 'ar' ? 'عميل راضي' : 'Happy Customers',
+      label: 'Happy Customers',
       icon: Users
     },
     {
       number: '500+',
-      label: locale === 'ar' ? 'منتج متنوع' : 'Diverse Products',
+      label: 'Diverse Products',
       icon: ShoppingCart
     },
     {
       number: '24/7',
-      label: locale === 'ar' ? 'خدمة عملاء' : 'Customer Service',
+      label: 'Customer Service',
       icon: Star
     }
   ]

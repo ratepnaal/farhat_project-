@@ -249,7 +249,7 @@ export default function EnglishPage() {
                   <Phone className="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1" />
                   <div className="ms-3">
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-600 dark:text-gray-400">{t.contact.phone}</p>
+                    <p className="text-gray-600 dark:text-gray-400">+963945712929</p>
                   </div>
                 </div>
                 

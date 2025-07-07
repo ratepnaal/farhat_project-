@@ -58,13 +58,14 @@ export function Navbar({ locale }: NavbarProps) {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="flex items-center">
             <Image
               src={logo}
               alt="Farhat Savings Center Logo"
               width={140}
               height={45}
               priority
+              className={dir === 'rtl' ? 'ms-4' : 'me-4'}
             />
           </Link>
 

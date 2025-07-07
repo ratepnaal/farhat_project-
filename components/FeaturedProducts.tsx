@@ -6,8 +6,8 @@ import { useProductModal } from '@/hooks/use-product-modal'
 
 const products = [
   { key: 0, img: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80', altEn: 'Premium Syrian olive oil in glass bottle', altAr: 'زيت زيتون سوري مميز في زجاجة' },
-  { key: 1, img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=400&q=80', altEn: 'Black Forest Honey jar', altAr: 'عسل الغابة السوداء في برطمان' },
-  { key: 2, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80', altEn: 'Fresh pita bread from bakery', altAr: 'خبز صاج طازج من المخبز' },
+  { key: 1, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80', altEn: 'Fresh pita bread from bakery', altAr: 'خبز صاج طازج من المخبز' },
+  { key: 2, img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=400&q=80', altEn: 'Black Forest Honey jar', altAr: 'عسل الغابة السوداء في برطمان' },
   { key: 3, img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', altEn: 'Organic lentils and legumes', altAr: 'عدس عضوي وبقوليات' },
   { key: 4, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=400&q=80', altEn: 'Fresh ayran yogurt drink', altAr: 'شراب عيران طازج' }
 ]
