@@ -152,5 +152,38 @@
     "offers": "Offers",
     "about": "About",
     "contact": "Contact"
-  }
+  },
+  "chooseUs": {
+    "title": "Why Choose Us?",
+    "quality": {
+      "title": "Guaranteed Quality",
+      "description": "We carefully select our products to ensure you always get the best."
+    },
+    "savings": {
+      "title": "Great Savings",
+      "description": "We offer the best competitive prices in the area for real savings on every purchase."
+    },
+    "service": {
+      "title": "Excellent Service",
+      "description": "From fast delivery to bill payments, we are here to make your life easier."
+    }
+  },
+  "products": [
+    {
+      "id": "prod_1",
+      "name": "Premium Honey",
+      "description": "Natural and pure honey, perfect for a healthy breakfast and sweetening your favorite drinks.",
+      "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+      "old_price": "SYP 25,000",
+      "new_price": "SYP 20,000"
+    },
+    {
+      "id": "prod_2",
+      "name": "Canned Goods Variety",
+      "description": "A wide selection of high-quality canned goods, from beans to vegetables, for quick and easy meals.",
+      "image": "https://images.unsplash.com/photo-1608686207856-001b95cf60ca",
+      "old_price": "SYP 8,000",
+      "new_price": "SYP 6,500"
+    }
+  ]
 } 

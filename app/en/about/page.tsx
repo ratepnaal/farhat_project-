@@ -238,18 +238,18 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <ShieldCheck className="mx-auto w-14 h-14 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.qualityTitle}</h3>
-              <p>{t.chooseUs.qualityDesc}</p>
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.quality.title}</h3>
+              <p>{t.chooseUs.quality.description}</p>
             </div>
             <div className="text-center">
               <Coins className="mx-auto w-14 h-14 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.savingsTitle}</h3>
-              <p>{t.chooseUs.savingsDesc}</p>
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.savings.title}</h3>
+              <p>{t.chooseUs.savings.description}</p>
             </div>
             <div className="text-center">
               <HeartHandshake className="mx-auto w-14 h-14 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.serviceTitle}</h3>
-              <p>{t.chooseUs.serviceDesc}</p>
+              <h3 className="text-xl font-semibold mb-2">{t.chooseUs.service.title}</h3>
+              <p>{t.chooseUs.service.description}</p>
             </div>
           </div>
         </div>
