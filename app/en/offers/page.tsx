@@ -240,11 +240,11 @@ export default function OffersPage() {
                     
                     {/* Price */}
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        {product.newPrice.toLocaleString()} SYP
+                      <span className="text-green-600 dark:text-green-400 font-bold text-lg">
+                        {product.newPrice.toLocaleString('en-US')} SYP
                       </span>
-                      <span className="text-lg text-gray-400 line-through">
-                        {product.oldPrice.toLocaleString()} SYP
+                      <span className="text-gray-500 dark:text-gray-400 line-through text-sm ms-2">
+                        {product.oldPrice.toLocaleString('en-US')} SYP
                       </span>
                     </div>
                     

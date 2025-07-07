@@ -160,16 +160,16 @@ export default function EnglishPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                        {offer.old_price.toLocaleString()} SYP
+                        {offer.old_price.toLocaleString('en-US')} SYP
                       </span>
                       <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {offer.new_price.toLocaleString()} SYP
+                        {offer.new_price.toLocaleString('en-US')} SYP
                       </span>
                     </div>
                   </div>
 
                   <a
-                    href={`https://wa.me/963111234567?text=Hello, I would like to order the offer: ${encodeURIComponent(offer.name)}`}
+                    href={`https://wa.me/963945712929?text=Hello, I would like to order the offer: ${encodeURIComponent(offer.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center"

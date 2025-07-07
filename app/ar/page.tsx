@@ -170,7 +170,7 @@ export default function ArabicPage() {
                   </div>
 
                   <a
-                    href={`https://wa.me/963111234567?text=مرحباً، أود طلب العرض: ${encodeURIComponent(offer.name)}`}
+                    href={`https://wa.me/963945712929?text=مرحباً، أرغب بالاستفسار عن عرض: ${encodeURIComponent(offer.name)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center"
