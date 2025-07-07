@@ -132,6 +132,16 @@ export function Footer({ locale }: FooterProps) {
                   : '© 2024 Farhat Savings Center. All rights reserved.'
                 }
               </p>
+              <div className="mt-2">
+                <a
+                  href="https://react-portfolio-rosy-eta.vercel.app/#contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-gray-500 hover:text-accent transition-colors duration-200"
+                >
+                  Developed by: Eng. Rateb
+                </a>
+              </div>
             </div>
 
             {/* Social Media Icons */}
