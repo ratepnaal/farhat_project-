@@ -1,69 +1,88 @@
+/* 1. Import Fonts First */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Inter:wght@400;700&display=swap');
+/* 2. Define Tailwind Base, Components, Utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@400;700&display=swap');
-
+/* 3. Define Base Layer Styles and CSS Variables AFTER Tailwind */
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    /* Define other shadcn/ui color variables here */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
   }
-  
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* Define dark mode variables */
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
   body {
-    @apply bg-white dark:bg-gray-900 text-brand-dark dark:text-brand-cream;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'Inter', sans-serif;
   }
-  
-  [dir="rtl"] {
-    font-family: 'Noto Sans Arabic', system-ui, sans-serif;
-    line-height: 1.8;
-  }
-  
-  /* Arabic typography improvements */
-  [dir="rtl"] p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-  }
-  
-  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
-    line-height: 1.6;
-    font-family: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif;
-    font-weight: 700;
-  }
-  
-  [dir="rtl"] .text-lg {
-    font-size: 1.125rem;
-    line-height: 1.8;
-  }
-  
-  [dir="rtl"] .text-xl {
-    font-size: 1.25rem;
-    line-height: 1.7;
-  }
-  
-  [dir="rtl"] .text-2xl {
-    font-size: 1.5rem;
-    line-height: 1.6;
+  [dir="rtl"] body {
+    font-family: 'Tajawal', sans-serif;
   }
 }
 
 @layer components {
+  /* Custom Container */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+  /* Buttons Styling */
   .btn-primary {
-    @apply bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 hover:bg-primary-dark;
+    @apply inline-block bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg;
   }
-  
   .btn-secondary {
-    @apply bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200;
+    @apply inline-block bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-brand-dark dark:text-brand-cream font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
-  
+  /* Section Padding */
   .section-padding {
     @apply py-16 md:py-24;
   }
-  
+  /* Text Gradient with Brand Colors */
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+  /* Product/Offer Card Styling */
+  .offer-card {
+    @apply bg-white dark:bg-gray-800/50 rounded-lg p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200 dark:border-gray-700;
   }
 } 

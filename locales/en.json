@@ -10,7 +10,8 @@
   "hero": {
     "title": "Farhat Savings Center",
     "tagline": "Your First Destination for Savings in Al-Zahira!",
-    "cta": "Explore Our Services"
+    "cta": "Explore Our Services",
+    "beeOrderBtn": "Shop via Bee Order (All of Damascus)"
   },
   "about": {
     "title": "Our Story in the Heart of Damascus",
@@ -168,22 +169,86 @@
       "description": "From fast delivery to bill payments, we are here to make your life easier."
     }
   },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "reviews": [
+      {
+        "quote": "The free delivery service in Al-Zahira is excellent and very fast. All the products I order arrive with the same high quality I'm used to.",
+        "name": "Ahmad K.",
+        "context": "Loyal customer from Al-Zahira"
+      },
+      {
+        "quote": "The best thing they have is the detergents section; all brands are available at prices cheaper than the market. Their service is top-notch.",
+        "name": "Sarah M.",
+        "context": "Grocery Store Owner"
+      },
+      {
+        "quote": "Honestly, their bill payment service is a lifesaver. It saves me so much time and effort, all while I'm doing my grocery shopping.",
+        "name": "Laila F.",
+        "context": "Customer from Al-Midan"
+      }
+    ]
+  },
   "products": [
     {
       "id": "prod_1",
-      "name": "Premium Honey",
-      "description": "Natural and pure honey, perfect for a healthy breakfast and sweetening your favorite drinks.",
-      "image": "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
-      "old_price": "SYP 25,000",
-      "new_price": "SYP 20,000"
+      "name": "Torabika Cappuccino",
+      "description": "A blend of instant coffee, cream, and sugar. Sprinkle chocolate granules over the cappuccino foam.",
+      "image": "/torabika.jpeg",
+      "old_price": "SYP 3,499",
+      "new_price": "SYP 2,999"
     },
     {
       "id": "prod_2",
-      "name": "Canned Goods Variety",
-      "description": "A wide selection of high-quality canned goods, from beans to vegetables, for quick and easy meals.",
-      "image": "https://images.unsplash.com/photo-1608686207856-001b95cf60ca",
-      "old_price": "SYP 8,000",
-      "new_price": "SYP 6,500"
+      "name": "Blue Sham Coffee 500g",
+      "description": "The world's best-selling coffee enhanced with extra green cardamom.",
+      "image": "/alshami_coffee.jpeg",
+      "old_price": "SYP 79,999",
+      "new_price": "SYP 73,999"
+    },
+    {
+      "id": "prod_3",
+      "name": "Master Chips Large",
+      "description": "Enjoy a light meal with Master Chips Large hot and seasoned 180 grams! These crispy chips contain a delicious flavor that will make you want more.",
+      "image": "/master.jpeg",
+      "old_price": "SYP 14,999",
+      "new_price": "SYP 10,999"
+    },
+    {
+      "id": "prod_4",
+      "name": "Melka Chocolate",
+      "description": "A wide variety of flavors are available, including Alpine milk chocolate, Oreo, caramel, strawberry, and hazelnut.",
+      "image": "/melka.jpeg",
+      "old_price": "SYP 14,999",
+      "new_price": "SYP 10,999"
+    },
+    {
+      "id": "prod_5",
+      "name": "Lets Red Detergent Powder",
+      "description": "Lets Clean laundry powder contains advanced enzyme power that cleans and removes stubborn stains from your clothes. With a refreshing scent that lasts long.",
+      "image": "/lets.jpeg",
+      "old_price": "SYP 56,999",
+      "new_price": "SYP 52,499"
+    },
+    {
+      "id": "prod_6",
+      "name": "Carmel Air Freshener",
+      "description": "With its new and advanced formula, it sterilizes all areas of the home from tiles, walls, bathrooms, and kitchens, eliminating 99.9% of germs and bacteria accumulated in the home.",
+      "image": "/carmel.jpeg",
+      "old_price": "SYP 15,999",
+      "new_price": "SYP 10,499"
+    },
+    {
+      "id": "prod_7",
+      "name": "Tagzea Nutrition Beef Mortadella",
+      "description": "With its new and advanced formula, it sterilizes all areas of the home from tiles, walls, bathrooms, and kitchens, eliminating 99.9% of germs and bacteria accumulated in the home.",
+      "image": "/tagzea.jpeg",
+      "old_price": "SYP 15,499",
+      "new_price": "SYP 12,499"
     }
-  ]
+  ],
+  "beeOrder": {
+    "priceLabel": "Price via Bee Order (includes 9% commission)",
+    "orderBtn": "Order via Bee Order"
+  }
 } 

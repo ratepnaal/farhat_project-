@@ -21,6 +21,7 @@ import {
 } from 'lucide-react'
 import { FeaturedProducts } from '@/components/FeaturedProducts'
 import { motion } from 'framer-motion'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
 export default function ArabicPage() {
   const locale: Locale = 'ar'
@@ -136,7 +137,7 @@ export default function ArabicPage() {
             {weeklyOffers.map((offer) => (
               <div
                 key={offer.id}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 group"
+                className="offer-card group overflow-hidden"
               >
                 {/* Product Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -169,14 +170,23 @@ export default function ArabicPage() {
                     </div>
                   </div>
 
-                  <a
-                    href={`https://wa.me/963945712929?text=مرحباً، أرغب بالاستفسار عن عرض: ${encodeURIComponent(offer.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center"
-                  >
-                    اطلب العرض الآن
-                  </a>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <button className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center">اطلب العرض الآن</button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem asChild>
+                        <a href={`https://wa.me/963945712929?text=مرحباً، أرغب بالاستفسار عن عرض: ${encodeURIComponent(offer.name)}`} target="_blank" rel="noopener noreferrer">
+                          الطلب عبر واتساب
+                        </a>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a href={`https://beeorder.com/sy/farhat-center/product/${offer.id}`} target="_blank" rel="noopener noreferrer">
+                          الطلب عبر بي أوردر (+9% عمولة)
+                        </a>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </div>
             ))}
@@ -219,6 +229,32 @@ export default function ArabicPage() {
                 <p className="text-gray-600 dark:text-gray-400 text-center">
                   {service.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-padding bg-white dark:bg-gray-900">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gradient">
+            {t.testimonials.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {t.testimonials.reviews.map((review: any, idx: number) => (
+              <div key={idx} className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                {/* Review Content */}
+                <div className="text-center">
+                  <p className="text-base md:text-lg text-gray-700 dark:text-gray-200 mb-4">{review.quote}</p>
+                  <div className="flex items-center justify-center mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-lg md:text-xl">★</span>
+                    ))}
+                  </div>
+                  <strong className="block text-primary-700 dark:text-primary-300">{review.name}</strong>
+                  <p className="text-xs text-gray-500 mt-1">{review.context}</p>
+                </div>
               </div>
             ))}
           </div>

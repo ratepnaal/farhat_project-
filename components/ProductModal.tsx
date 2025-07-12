@@ -6,6 +6,7 @@ import { X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
+import { getTranslations, type Locale } from '@/lib/translations';
 
 export function ProductModal() {
   const { isOpen, onClose, product } = useProductModal();
@@ -35,6 +36,9 @@ export function ProductModal() {
   if (!product) {
     return null;
   }
+
+  const locale: Locale = isArabic ? 'ar' : 'en';
+  const t = getTranslations(locale);
 
   return (
     <AnimatePresence>
@@ -97,7 +101,7 @@ export function ProductModal() {
               </p>
 
               {/* Price */}
-              <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="flex items-center justify-center gap-4 mb-2">
                 {product.old_price && (
                   <p className="text-lg text-gray-500 line-through font-medium">
                     {product.old_price}
@@ -108,17 +112,46 @@ export function ProductModal() {
                 </p>
               </div>
 
+              {/* Bee Order Price Section */}
+              <div className="mb-6 text-center">
+                <div className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  {t.beeOrder.priceLabel}
+                </div>
+                <div className="text-xl font-bold text-yellow-600 dark:text-yellow-400">
+                  {(() => {
+                    // Parse price, remove non-numeric chars, multiply by 1.09, format as currency
+                    const priceStr = product.new_price || '';
+                    const num = Number(priceStr.replace(/[^\d.]/g, ''));
+                    if (isNaN(num)) return '-';
+                    const beeOrderPrice = Math.round(num * 1.09);
+                    return isArabic
+                      ? beeOrderPrice.toLocaleString('ar-EG') + ' ل.س'
+                      : beeOrderPrice.toLocaleString('en-US') + ' SYP';
+                  })()}
+                </div>
+              </div>
+
               {/* WhatsApp Button */}
               <motion.a 
                 href={`https://wa.me/963945712929?text=مرحباً، أنا مهتم بالمنتج: ${product.name}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg text-center block transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg text-center block transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mb-3"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 💬 {isArabic ? 'اطلب عبر واتساب' : 'Order via WhatsApp'}
               </motion.a>
+
+              {/* Bee Order Button */}
+              <a
+                href={`https://beeorder.com/sy/farhat-center/product/${product.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-4 px-6 rounded-lg text-center block transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                🐝 {t.beeOrder.orderBtn}
+              </a>
             </div>
           </motion.div>
         </motion.div>

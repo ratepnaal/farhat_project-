@@ -102,7 +102,7 @@ export function Footer({ locale }: FooterProps) {
                   href="tel:+963-11-1234567" 
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-200"
                 >
-                  +963-11-1234567
+                  +963-945-712-929
                 </a>
               </div>
               
@@ -110,7 +110,7 @@ export function Footer({ locale }: FooterProps) {
                 <Clock className="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    {locale === 'ar' ? 'مفتوح يومياً: 7:00 صباحاً - 10:00 مساءً' : 'Open Daily: 7:00 AM - 10:00 PM'}
+                    {locale === 'ar' ?'مفتوح يوميا من 10:00 صباحا - 11:00 مساءا عدا الجمعة 4:00 عصرا - 11:00 مساءا ' : 'Open Daily: 7:00 AM - 10:00 PM'}
                   </p>
                 </div>
               </div>
