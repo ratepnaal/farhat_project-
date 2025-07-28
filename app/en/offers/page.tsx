@@ -15,6 +15,7 @@ import {
   Truck,
   Zap
 } from 'lucide-react'
+import Image from 'next/image'
 
 export default function OffersPage() {
   const locale: Locale = 'en'
@@ -60,95 +61,16 @@ export default function OffersPage() {
     }
   ]
 
-  const products = [
-    {
-      id: 'olive-oil-premium',
-      name: 'Premium Olive Oil',
-      nameAr: 'زيت زيتون مميز',
-      oldPrice: 85000,
-      newPrice: 68000,
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeUXiAMYaNdPXUfh5TxRDAU8ZkxT-Odh4T2w&s',
-      altText: 'Premium Syrian olive oil in glass bottle',
-      category: 'Oils',
-      categoryAr: 'زيوت',
-      discount: '20%',
-      isLimited: true
-    },
-    {
-      id: 'organic-honey',
-      name: 'Organic Honey',
-      nameAr: 'عسل عضوي طبيعي',
-      oldPrice: 45000,
-      newPrice: 36000,
-      image: 'https://www.google.com/imgres?q=%D8%AE%D8%A8%D8%B2%20%D8%B5%D8%A7%D8%AC%20%D8%B7%D8%A7%D8%B2%D8%AC%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%AE%D8%A8%D8%B2%27&imgurl=https%3A%2F%2Falepmarket.fr%2F5035-home_default%2F-5-300.jpg&imgrefurl=https%3A%2F%2Falepmarket.fr%2Far%2Fpain%2F287--x3-300-3315111604861.html&docid=SG3FR8nn3lybkM&tbnid=XLy6Cj92T4CXQM&vet=12ahUKEwiw9d7srauOAxV5Q0EAHWXkN3UQM3oECDcQAA..i&w=540&h=540&hcb=2&ved=2ahUKEwiw9d7srauOAxV5Q0EAHWXkN3UQM3oECDcQAA',
-      altText: 'Natural premium honey in jar',
-      category: 'Natural Products',
-      categoryAr: 'منتجات طبيعية',
-      discount: '20%',
-      isLimited: true
-    },
-    {
-      id: 'fresh-bread',
-      name: 'Fresh Artisan Bread',
-      nameAr: 'خبز طازج يدوي',
-      oldPrice: 15000,
-      newPrice: 10000,
-      image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop',
-      altText: 'Fresh artisan bread from bakery',
-      category: 'Bakery',
-      categoryAr: 'مخبز',
-      discount: '33%',
-      isLimited: true
-    },
-    {
-      id: 'dried-fruits-mix',
-      name: 'Premium Dried Fruits Mix',
-      nameAr: 'مزيج فواكه مجففة مميز',
-      oldPrice: 75000,
-      newPrice: 60000,
-      image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&h=300&fit=crop',
-      altText: 'Premium dried fruits mix collection',
-      category: 'Dried Fruits',
-      categoryAr: 'فواكه مجففة',
-      discount: '20%',
-      isLimited: false
-    },
-    {
-      id: 'organic-tea',
-      name: 'Organic Green Tea',
-      nameAr: 'شاي أخضر عضوي',
-      oldPrice: 35000,
-      newPrice: 28000,
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop',
-      altText: 'Organic green tea leaves',
-      category: 'Beverages',
-      categoryAr: 'مشروبات',
-      discount: '20%',
-      isLimited: true
-    },
-    {
-      id: 'spices-collection',
-      name: 'Premium Spices Collection',
-      nameAr: 'مجموعة توابل مميزة',
-      oldPrice: 120000,
-      newPrice: 96000,
-      image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=300&fit=crop',
-      altText: 'Premium spices collection',
-      category: 'Spices',
-      categoryAr: 'توابل',
-      discount: '20%',
-      isLimited: false
-    }
-  ]
+  const products = t.products
 
   const handleProductClick = (product: any) => {
     const modalProduct = {
       name: product.name,
       image: product.image,
-      altText: product.altText,
-      description: `Premium ${product.category.toLowerCase()} from Farhat Savings Center. ${product.isLimited ? 'Limited time offer!' : 'Available now.'}`,
-      old_price: product.oldPrice ? `${product.oldPrice} SYP` : undefined,
-      new_price: `${product.newPrice} SYP`,
+      altText: product.name,
+      description: `Premium product from Farhat Savings Center. Limited time offer!`,
+      old_price: product.old_price,
+      new_price: product.new_price,
     };
     onOpen(modalProduct);
   };
@@ -190,9 +112,7 @@ export default function OffersPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
               {t.offers.featured.title}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              {t.offers.featured.subtitle}
-            </p>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -205,35 +125,25 @@ export default function OffersPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 group-hover:scale-105">
                   {/* Product Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.name}
+                      fill
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                     
-                    {/* Limited Time Badge */}
-                    {product.isLimited && (
-                      <div className="absolute top-3 right-3">
-                        <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                          {t.offers.limitedTime}
+                    {/* Discount Badge */}
+                    {product?.discount && (
+                      <div className="absolute top-3 left-3">
+                        <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                          -{product?.discount}
                         </div>
                       </div>
                     )}
-                    
-                    {/* Discount Badge */}
-                    <div className="absolute top-3 left-3">
-                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        -{product.discount}
-                      </div>
-                    </div>
                   </div>
 
                   {/* Product Info */}
                   <div className="p-6">
-                    <div className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-2">
-                      {product.category}
-                    </div>
-                    
                     <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                       {product.name}
                     </h3>
@@ -241,11 +151,13 @@ export default function OffersPage() {
                     {/* Price */}
                     <div className="flex items-center gap-3 mb-4">
                       <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {product.newPrice.toLocaleString('en-US')} SYP
+                        {product.new_price}
                       </span>
-                      <span className="text-gray-500 dark:text-gray-400 line-through text-sm ms-2">
-                        {product.oldPrice.toLocaleString('en-US')} SYP
-                      </span>
+                      {product.old_price && (
+                        <span className="text-gray-500 dark:text-gray-400 line-through text-sm ms-2">
+                          {product.old_price}
+                        </span>
+                      )}
                     </div>
                     
                     {/* View Details Button */}

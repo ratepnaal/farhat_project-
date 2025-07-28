@@ -86,7 +86,13 @@
     },
     "featured": {
       "title": "منتجات مميزة",
-      "subtitle": "اكتشف تشكيلة واسعة من المنتجات عالية الجودة بأسعار مميزة"
+      "items": [
+        { "name": "معلبات وحبوب" },
+        { "name": "شيبس وبسكويت" },
+        { "name": "ألبان وأجبان" },
+        { "name": "منظفات" },
+        { "name": "مستلزمات الأطفال" }
+      ]
     },
     "delivery": {
       "title": "توصيل مجاني",
@@ -190,6 +196,12 @@
       }
     ]
   },
+  "weeklyOffers": [
+    { "id": "offer_1", "name": "عرض لاكتما قطعتين + قطعة", "image": "/offer-main/laktima-offer.png.jpg", "old_price": "14,999", "new_price": "11,999", "discount": "20%" },
+    { "id": "offer_2", "name": "اثنان دبس البندورة الغوطة + مخلل الثوم مجانا", "image": "/offer-main/alghota-offer.png.jpg", "old_price": "40,999", "new_price": "32,999", "discount": "20%" },
+    { "id": "offer_3", "name": "عرض 6 صابون ماتيز", "image": "/offer-main/matiz-offer.png", "old_price": "19,999", "new_price": "16,499", "discount": "33%" },
+    { "id": "offer_4", "name": "عرض 2 علبة مرتديلا زينة + هوت دوغ مجانا", "image": "/offer-main/zena-offer.png.jpg", "old_price": "28,499", "new_price": "23,499", "discount": "20%" }
+  ],
   "products": [
     {
       "id": "prod_1",
@@ -246,10 +258,26 @@
       "image": "/tagzea.jpeg",
       "old_price": "15499 ل.س",
       "new_price": "12499 ل.س"
+    },
+    {
+      "id": "prod_8",
+      "name": "عرض بسكويت سلفيتو للشاي - 6 عبوات",
+      "image": "/offer/selvito_offer.png",
+      "old_price": "15,499",
+      "new_price": "8,499",
+      "discount": "20%"
+    },
+    {
+      "id": "prod_9",
+      "name": "كاتشب الغوطة مع صلصة باربكيو مجاناً",
+      "image": "/offer/alghota-sauce-offer.png.jpg",
+      "old_price": "30,999",
+      "new_price": "14,499",
+      "discount": "20%"
     }
   ],
   "beeOrder": {
-    "priceLabel": "السعر عبر بي أوردر (شامل 9% عمولة)",
+    "priceLabel": "السعر عبر بي أوردر (شامل 10% عمولة)",
     "orderBtn": "اطلب عبر بي أوردر"
   }
 } 

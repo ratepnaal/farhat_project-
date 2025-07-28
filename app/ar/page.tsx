@@ -40,40 +40,7 @@ export default function ArabicPage() {
     { icon: Truck, title: t.services.items[6].title, description: t.services.items[6].description },
   ]
 
-  const weeklyOffers = [
-    {
-      id: 1,
-      name:"عرض لاكتما قطعتين + قطعة ",
-      image_url:offer1,
-      old_price: 14999,
-      new_price: 11999,
-      discount: "20%"
-    },
-    {
-      id: 2,
-      name: "  اثنان دبس البندورة الغوطة + مخلل الثوم مجانا",
-      image_url: offer2,
-      old_price: 40999,
-      new_price: 32999,
-      discount: "20%"
-    },
-    {
-      id: 3,
-      name: "عرض 6 صابون ماتيز ",
-      image_url:offer3 ,
-      old_price: 19999,
-      new_price: 16499,
-      discount: "20%"
-    },
-    {
-      id: 4,
-      name: "عرض 2 علبة مرتديلا زينة + هوت دوغ مجانا ",
-      image_url: offer4,
-      old_price: 28499,
-      new_price: 23499,
-      discount: "20%"
-    }
-  ]
+  const weeklyOffers = t.weeklyOffers || []
 
   return (
     <PageWrapper locale={locale}>
@@ -145,7 +112,7 @@ export default function ArabicPage() {
                 {/* Product Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={offer.image_url}
+                    src={offer.image}
                     alt={offer.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -165,10 +132,10 @@ export default function ArabicPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                        {offer.old_price.toLocaleString('ar-EG')} ل.س
+                        {offer.old_price}
                       </span>
                       <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {offer.new_price.toLocaleString('ar-EG')} ل.س
+                        {offer.new_price}
                       </span>
                     </div>
                   </div>

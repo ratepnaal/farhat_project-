@@ -35,40 +35,7 @@ export default function EnglishPage() {
     { icon: Truck, title: t.services.items[6].title, description: t.services.items[6].description },
   ]
 
-  const weeklyOffers = [
-    {
-      id: 1,
-      name: "Premium Olive Oil",
-      image_url: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 85000,
-      new_price: 68000,
-      discount: "20%"
-    },
-    {
-      id: 2,
-      name: "Organic Pasta Pack",
-      image_url: "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 45000,
-      new_price: 36000,
-      discount: "20%"
-    },
-    {
-      id: 3,
-      name: "Premium Detergent",
-      image_url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 65000,
-      new_price: 52000,
-      discount: "20%"
-    },
-    {
-      id: 4,
-      name: "Fresh Bread Bundle",
-      image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 35000,
-      new_price: 28000,
-      discount: "20%"
-    }
-  ]
+  const weeklyOffers = t.weeklyOffers || []
 
   return (
     <PageWrapper locale={locale}>
@@ -124,10 +91,10 @@ export default function EnglishPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {t.weeklyOffers.title}
+              Our Special Offers This Week
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {t.weeklyOffers.subtitle}
+              Don't miss out on these amazing deals!
             </p>
           </div>
           
@@ -140,7 +107,7 @@ export default function EnglishPage() {
                 {/* Product Image */}
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={offer.image_url}
+                    src={offer.image}
                     alt={offer.name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -157,16 +124,16 @@ export default function EnglishPage() {
                     {offer.name}
                   </h3>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                        {offer.old_price.toLocaleString('en-US')} SYP
-                      </span>
-                      <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {offer.new_price.toLocaleString('en-US')} SYP
-                      </span>
+                                      <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
+                          {offer.old_price}
+                        </span>
+                        <span className="text-green-600 dark:text-green-400 font-bold text-lg">
+                          {offer.new_price}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
                   <a
                     href={`https://wa.me/963945712929?text=Hello, I would like to order the offer: ${encodeURIComponent(offer.name)}`}
@@ -187,7 +154,7 @@ export default function EnglishPage() {
               href="/en/offers"
               className="inline-flex items-center btn-secondary bg-primary-600 hover:bg-primary-700 text-white border-primary-600"
             >
-              {t.weeklyOffers.viewAll}
+              View All Offers
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
