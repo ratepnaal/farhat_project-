@@ -17,11 +17,19 @@ export function LanguageSwitcher() {
     { code: 'ar', name: 'Arabic', native: 'عربي' }
   ]
 
-  const handleLanguageChange = (locale: string) => {
-    setIsOpen(false)
-    const newPath = locale === 'en' ? '/' : `/${locale}`
-    router.push(newPath)
-  }
+  const handleLanguageChange = (newLocale: string) => {
+    setIsOpen(false);
+    // Remove the current locale (/ar or /en) from the pathname to get the base path
+    const pathWithoutLocale = pathname.startsWith('/ar')
+      ? pathname.substring(3)
+      : pathname.startsWith('/en')
+        ? pathname.substring(3)
+        : pathname;
+    // Construct the new path with the new locale, ensuring the root path is handled correctly
+    const newPath = `/${newLocale}${pathWithoutLocale || '/'}`;
+    // Use router.replace for a cleaner navigation history
+    router.replace(newPath);
+  };
 
   const currentLanguage = languages.find(lang => lang.code === currentLocale) || languages[0]
 

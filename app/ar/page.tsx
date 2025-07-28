@@ -22,7 +22,10 @@ import {
 import { FeaturedProducts } from '@/components/FeaturedProducts'
 import { motion } from 'framer-motion'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-
+import offer1 from '@/public/offer-main/laktima-offer.png.jpg'
+import offer2 from '@/public/offer-main/alghota-offer.png.jpg'
+import offer3 from '@/public/offer-main/matiz-offer.png'
+import offer4 from '@/public/offer-main/zena-offer.png.jpg'
 export default function ArabicPage() {
   const locale: Locale = 'ar'
   const t = getTranslations(locale)
@@ -40,34 +43,34 @@ export default function ArabicPage() {
   const weeklyOffers = [
     {
       id: 1,
-      name: "زيت زيتون مميز",
-      image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeUXiAMYaNdPXUfh5TxRDAU8ZkxT-Odh4T2w&s",
-      old_price: 85000,
-      new_price: 68000,
+      name:"عرض لاكتما قطعتين + قطعة ",
+      image_url:offer1,
+      old_price: 14999,
+      new_price: 11999,
       discount: "20%"
     },
     {
       id: 2,
-      name: "عبوة معكرونة عضوية",
-      image_url: "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 45000,
-      new_price: 36000,
+      name: "  اثنان دبس البندورة الغوطة + مخلل الثوم مجانا",
+      image_url: offer2,
+      old_price: 40999,
+      new_price: 32999,
       discount: "20%"
     },
     {
       id: 3,
-      name: "منظف مميز",
-      image_url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 65000,
-      new_price: 52000,
+      name: "عرض 6 صابون ماتيز ",
+      image_url:offer3 ,
+      old_price: 19999,
+      new_price: 16499,
       discount: "20%"
     },
     {
       id: 4,
-      name: "حزمة خبز طازج",
-      image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      old_price: 35000,
-      new_price: 28000,
+      name: "عرض 2 علبة مرتديلا زينة + هوت دوغ مجانا ",
+      image_url: offer4,
+      old_price: 28499,
+      new_price: 23499,
       discount: "20%"
     }
   ]

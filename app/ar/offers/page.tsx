@@ -15,6 +15,12 @@ import {
   Truck,
   Zap
 } from 'lucide-react'
+import offer1 from '@/public/offer-main/laktima-offer.png.jpg'
+import offer2 from '@/public/offer-main/alghota-offer.png.jpg'
+import offer3 from '@/public/offer-main/matiz-offer.png'
+import offer4 from '@/public/offer-main/zena-offer.png.jpg'
+import offer5 from '@/public/offer/alghota-sauce-offer.png.jpg'
+import offer6 from '@/public/offer/selvito_offer.png'
 
 export default function OffersPage() {
   const locale: Locale = 'ar'
@@ -63,67 +69,67 @@ export default function OffersPage() {
   const products = [
     {
       id: 'olive-oil-premium',
-      name: 'زيت زيتون مميز',
-      oldPrice: 85000,
-      newPrice: 68000,
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeUXiAMYaNdPXUfh5TxRDAU8ZkxT-Odh4T2w&s',
+       name:"عرض لاكتما قطعتين + قطعة ",
+      oldPrice: 14999,
+      newPrice: 11999,
+      image:offer1,
       altText: 'زيت زيتون سوري مميز في زجاجة',
       category: 'زيوت',
       discount: '20%',
-      isLimited: true
+      isLimited: true 
     },
     {
-      id: 'organic-honey',
-      name: 'عسل عضوي طبيعي',
-      oldPrice: 45000,
-      newPrice: 36000,
-      image: 'https://www.google.com/imgres?q=%D8%AE%D8%A8%D8%B2%20%D8%B5%D8%A7%D8%AC%20%D8%B7%D8%A7%D8%B2%D8%AC%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D8%AE%D8%A8%D8%B2%27&imgurl=https%3A%2F%2Falepmarket.fr%2F5035-home_default%2F-5-300.jpg&imgrefurl=https%3A%2F%2Falepmarket.fr%2Far%2Fpain%2F287--x3-300-3315111604861.html&docid=SG3FR8nn3lybkM&tbnid=XLy6Cj92T4CXQM&vet=12ahUKEwiw9d7srauOAxV5Q0EAHWXkN3UQM3oECDcQAA..i&w=540&h=540&hcb=2&ved=2ahUKEwiw9d7srauOAxV5Q0EAHWXkN3UQM3oECDcQAA',
-      altText: 'عسل طبيعي مميز في برطمان',
-      category: 'منتجات طبيعية',
+      id: 'organic-honey',  
+      name:"  اثنان دبس البندورة الغوطة + مخلل الثوم مجانا",
+      oldPrice: 40999,
+      newPrice: 32999,
+      image:offer2,
+      altText: 'عرض دب سالبندورة والمخلل مجانا',
+      category: ' منتجات المطبخ ',
       discount: '20%',
       isLimited: true
     },
     {
       id: 'fresh-bread',
-      name: 'خبز طازج يدوي',
-      oldPrice: 15000,
-      newPrice: 10000,
-      image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop',
-      altText: 'خبز صاج طازج من المخبز',
-      category: 'مخبز',
+      name: "عرض 6 صابون ماتيز ",
+      oldPrice: 19999,
+      newPrice: 16499,
+      image:offer3,
+      altText:'عرض الصابون',
+      category: 'منظفات',
       discount: '33%',
       isLimited: true
     },
     {
       id: 'dried-fruits-mix',
-      name: 'مزيج فواكه مجففة مميز',
-      oldPrice: 75000,
-      newPrice: 60000,
-      image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400&h=300&fit=crop',
-      altText: 'مزيج فواكه مجففة مميز',
-      category: 'فواكه مجففة',
+      name: "عرض 2 علبة مرتديلا زينة + هوت دوغ مجانا ",
+      oldPrice: 28499,
+      newPrice: 23499,
+      image: offer4,
+      altText: 'عرض المرتديلا',
+      category: 'معلبات',
       discount: '20%',
       isLimited: false
     },
     {
       id: 'organic-tea',
-      name: 'شاي أخضر عضوي',
-      oldPrice: 35000,
-      newPrice: 28000,
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop',
-      altText: 'شاي أخضر عضوي',
-      category: 'مشروبات',
+      name:'عرض كتشب الغوطة مع صلصة الباربكيو مجانا ',
+      oldPrice: 30999,
+      newPrice: 14499,
+     image: offer5,
+    altText: 'عرض مع كتشب صوص باربكيو',
+    category: 'صوصات',
       discount: '20%',
       isLimited: true
     },
     {
       id: 'spices-collection',
-      name: 'مجموعة توابل مميزة',
-      oldPrice: 120000,
-      newPrice: 96000,
-      image: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=300&fit=crop',
-      altText: 'مجموعة توابل مميزة',
-      category: 'توابل',
+      name: 'عرض 6 قطع بسكوت سلفيتو للشاي ',
+      oldPrice: 15499,
+      newPrice: 8499,
+      image: offer6,
+      altText: 'عرض بسكوت الشاي',
+      category: 'بسكوت',
       discount: '20%',
       isLimited: false
     }
