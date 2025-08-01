@@ -123,7 +123,7 @@ export function ProductModal() {
                     const priceStr = product.new_price || '';
                     const num = Number(priceStr.replace(/[^\d.]/g, ''));
                     if (isNaN(num)) return '-';
-                    const beeOrderPrice = Math.round(num * 1.09);
+                    const beeOrderPrice = Math.round(num * 1.10);
                     return isArabic
                       ? beeOrderPrice.toLocaleString('ar-EG') + ' ل.س'
                       : beeOrderPrice.toLocaleString('en-US') + ' SYP';

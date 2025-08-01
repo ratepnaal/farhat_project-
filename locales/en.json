@@ -12,29 +12,13 @@
     "cta": "Explore Our Services",
     "beeOrderBtn": "Shop via Bee Order (All of Damascus)"
   },
-  "about": {
-    "title": "Our Story in the Heart of Damascus",
-    "content": "Located in the vibrant neighborhood of Al-Zahira, Farhat Savings Center has been serving our community with quality groceries, fresh detergents, and delicious bakery items. We also provide convenient bill payment services and accept card payments through Fattoura. Our commitment to quality and savings makes us your trusted partner for all your daily needs."
-  },
+
   "weeklyOffers": {
     "title": "Our Special Offers This Week",
     "subtitle": "Don't miss out on these amazing deals!",
     "viewAll": "View All Offers",
     "addToCart": "Add to Cart"
   },
-    "form": {
-      "title": "Apply Now",
-      "subtitle": "Fill out the form below and we'll get back to you soon",
-      "fullName": "Full Name *",
-      "fullNamePlaceholder": "Enter your full name",
-      "phone": "Phone Number *",
-      "phonePlaceholder": "Enter your phone number",
-      "about": "Tell us about yourself and why you want to join us *",
-      "aboutPlaceholder": "Tell us about your experience, skills, and why you'd like to join our team...",
-      "submit": "Submit Application",
-      "successMessage": "Thank you for your application! We will contact you soon."
-    },
-
   "services": {
     "title": "Our Comprehensive Services",
     "items": [
@@ -165,26 +149,7 @@
       "description": "From fast delivery to bill payments, we are here to make your life easier."
     }
   },
-  "testimonials": {
-    "title": "What Our Customers Say",
-    "reviews": [
-      {
-        "quote": "The free delivery service in Al-Zahira is excellent and very fast. All the products I order arrive with the same high quality I'm used to.",
-        "name": "Ahmad K.",
-        "context": "Loyal customer from Al-Zahira"
-      },
-      {
-        "quote": "The best thing they have is the detergents section; all brands are available at prices cheaper than the market. Their service is top-notch.",
-        "name": "Sarah M.",
-        "context": "Grocery Store Owner"
-      },
-      {
-        "quote": "Honestly, their bill payment service is a lifesaver. It saves me so much time and effort, all while I'm doing my grocery shopping.",
-        "name": "Laila F.",
-        "context": "Customer from Al-Midan"
-      }
-    ]
-  },
+ 
   "products": [
     {
       "id": "prod_1",
@@ -279,10 +244,65 @@
     "priceLabel": "Price via Bee Order (includes 10% commission)",
     "orderBtn": "Order via Bee Order"
   },
+  "about": {
+    "title": "Our Story in the Heart of Damascus",
+    "content": "Located in the vibrant neighborhood of Al-Zahira, Farhat Savings Center has been serving our community with quality groceries, fresh detergents, and delicious bakery items. We also provide convenient bill payment services and accept card payments through Fattoura. Our commitment to quality and savings makes us your trusted partner for all your daily needs.",
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Our story in serving the Al-Zahira community for over 15 years"
+    },
+    "story": {
+      "title": "Our Story",
+      "p1": "Our journey began in 2008 in the heart of Al-Zahira neighborhood in Damascus, where we started as a small grocery store with a clear vision to provide the best products and services to our local community.",
+      "p2": "Over the years, we have evolved from a simple grocery store to a comprehensive savings center offering a wide range of products and services, including groceries, detergents, bakery items, and bill payment services.",
+      "p3": "We are proud to be part of the Al-Zahira community and always strive to develop our services to meet our customers' growing needs."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide high-quality products and excellent services at competitive prices, with a focus on customer satisfaction and the development of our local community."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the first choice for shopping in the Al-Zahira area, known for our product quality and excellent customer service."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The values that guide our business and customer relationships",
+      "quality": {
+        "title": "Quality",
+        "description": "We are committed to providing the best products and services to our customers"
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "Our customers trust us to meet their daily needs"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We always strive for excellence in everything we do"
+      }
+    },
+    "stats": {
+      "title": "Our Statistics",
+      "experience": "Years of Experience",
+      "customers": "Happy Customers",
+      "products": "Diverse Products",
+      "service": "Customer Service"
+    },
+    "departments": {
+      "title": "Our Departments",
+      "canned": "Canned & Legumes",
+      "detergents": "Detergents & Home Supplies",
+      "dairy": "Dairy Products",
+      "bakery": "Bakery",
+      "beverages": "Beverages",
+      "snacks": "Snacks"
+    }
+  },
   "weeklyOffers": [
     { "id": "offer_1", "name": "Laktima Jell-O Offer: 2 + 1 Free", "image": "/offer-main/laktima-offer.png.jpg", "old_price": "14,999 SYP", "new_price": "11,999 SYP", "discount": "20%"  ,   "beeOrderId": "452766"  },
     { "id": "offer_2", "name": "Al Ghoota Tomato Paste + Free Garlic Pickles", "image": "/offer-main/alghota-offer.png.jpg", "old_price": "40,999 SYP", "new_price": "32,999 SYP", "discount": "20%" ,  "beeOrderId": "577480" },
     { "id": "offer_3", "name": "Matiz Soap Offer - 6 Bars", "image": "/offer-main/matiz-offer.png", "old_price": "19,999 SYP", "new_price": "16,499 SYP", "discount": "33%",  "beeOrderId": "588547" },
     { "id": "offer_4", "name": "Zena Mortadella Offer + Free Hot Dogs", "image": "/offer-main/zena-offer.png.jpg", "old_price": "28,499 SYP", "new_price": "23,499 SYP", "discount": "20%",  "beeOrderId": "577490" }
       ]
+      
 }

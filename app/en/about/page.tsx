@@ -9,16 +9,14 @@ import {
   Award, 
   Users,
   ShoppingCart,
-  Truck,
   Clock,
   Star,
   ShieldCheck,
   Coins,
   HeartHandshake
 } from 'lucide-react'
-import Link from 'next/link'
 
-export default function AboutPage() {
+export default function AboutArPage() {
   const locale: Locale = 'en'
   const t = getTranslations(locale)
   const dir = getDirection(locale)
@@ -26,22 +24,30 @@ export default function AboutPage() {
   const values = [
     {
       icon: Heart,
-      title: 'Quality',
-      description: 'We are committed to providing the best products and services to our customers'
+      title: t.about.values.quality.title,
+      description: t.about.values.quality.description
     },
     {
       icon: Target,
-      title: 'Reliability',
-      description: 'Our customers trust us to meet their daily needs'
+      title: t.about.values.reliability.title,
+      description: t.about.values.reliability.description
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We always strive for excellence in everything we do'
+      title: t.about.values.excellence.title,
+      description: t.about.values.excellence.description
     }
   ]
 
- 
+
+  const departments = [
+    { name: t.about.departments.canned, img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.canned },
+    { name: t.about.departments.detergents, img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.detergents },
+    { name: t.about.departments.dairy, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.dairy },
+    { name: t.about.departments.bakery, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.bakery },
+    { name: t.about.departments.beverages, img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.beverages },
+    { name: t.about.departments.snacks, img: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80', alt: t.about.departments.snacks }
+  ]
 
   return (
     <div className="min-h-screen" dir={dir}>
@@ -52,10 +58,10 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              {'About Us'}
+              {t.about.hero.title}
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              {'Our story in serving the Al-Zahira community for over 15 years'}
+              {t.about.hero.subtitle}
             </p>
           </div>
         </div>
@@ -67,18 +73,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
-                {'Our Story'}
+                {t.about.story.title}
               </h2>
               <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-                <p>
-                  {'Our journey began in 2008 in the heart of Al-Zahira neighborhood in Damascus, where we started as a small grocery store with a clear vision to provide the best products and services to our local community.'}
-                </p>
-                <p>
-                  {'Over the years, we have evolved from a simple grocery store to a comprehensive savings center offering a wide range of products and services, including groceries, detergents, bakery items, and bill payment services.'}
-                </p>
-                <p>
-                  {'We are proud to be part of the Al-Zahira community and always strive to develop our services to meet our customers\' growing needs.'}
-                </p>
+                <p>{t.about.story.p1}</p>
+                <p>{t.about.story.p2}</p>
+                <p>{t.about.story.p3}</p>
               </div>
             </div>
             <div className="relative">
@@ -104,10 +104,10 @@ export default function AboutPage() {
                 <Target className="w-10 h-10 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {'Our Mission'}
+                {t.about.mission.title}
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                {'To provide high-quality products and excellent services at competitive prices, with a focus on customer satisfaction and the development of our local community.'}
+                {t.about.mission.description}
               </p>
             </div>
             <div className="text-center">
@@ -115,10 +115,10 @@ export default function AboutPage() {
                 <Award className="w-10 h-10 text-primary-600 dark:text-primary-400" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {'Our Vision'}
+                {t.about.vision.title}
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                {'To be the first choice for shopping in the Al-Zahira area, known for our product quality and excellent customer service.'}
+                {t.about.vision.description}
               </p>
             </div>
           </div>
@@ -130,13 +130,12 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {'Our Values'}
+              {t.about.values.title}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {'The values that guide our business and customer relationships'}
+              {t.about.values.subtitle}
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
@@ -155,19 +154,13 @@ export default function AboutPage() {
         </div>
       </section>
 
+
       {/* Our Departments Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-900">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient text-center">Our Departments</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gradient text-center">{t.about.departments.title}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {[
-              { name: 'Canned & Legumes', img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80', alt: 'Canned goods and legumes section' },
-              { name: 'Detergents & Home Supplies', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=80', alt: 'Detergents and home cleaning supplies' },
-              { name: 'Dairy Products', img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: 'Fresh dairy products and cheese' },
-              { name: 'Bakery', img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80', alt: 'Fresh bakery items and bread' },
-              { name: 'Beverages', img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80', alt: 'Various beverages and drinks' },
-              { name: 'Snacks', img: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80', alt: 'Snacks and packaged foods' }
-            ].map((dept, idx) => (
+            {departments.map((dept, idx) => (
               <div key={idx} className="relative rounded-lg overflow-hidden shadow-lg group h-56">
                 <Image src={dept.img} alt={dept.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -208,4 +201,4 @@ export default function AboutPage() {
       </section>
     </div>
   )
-} 
+}
