@@ -92,10 +92,10 @@ export default function OffersPage() {
                     />
                     
                     {/* Discount Badge */}
-                    {product?.discount1 && (
+                    {product?.discount && (
                       <div className="absolute top-3 left-3">
                         <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          -{product?.discount1}
+                          -{product?.discount}
                         </div>
                       </div>
                     )}
