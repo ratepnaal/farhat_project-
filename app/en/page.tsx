@@ -104,6 +104,7 @@ export default function EnglishPage() {
              key={offer.id}
              className="offer-card group overflow-hidden cursor-pointer" // <-- أضفنا cursor-pointer
              onClick={() => onOpen({ 
+              beeOrderId: offer.beeOrderId,
                id: offer.id,
                name: offer.name,
                image: offer.image,
