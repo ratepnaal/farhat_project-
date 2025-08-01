@@ -8,6 +8,7 @@ interface Product {
   description: string;
   old_price?: string;
   new_price: string;
+  beeOrderId:string;
 }
 
 interface ProductModalStore {
