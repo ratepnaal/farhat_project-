@@ -12,238 +12,6 @@
     "cta": "Explore Our Services",
     "beeOrderBtn": "Shop via Bee Order (All of Damascus)"
   },
-
-  "weeklyOffers": {
-    "title": "Our Special Offers This Week",
-    "subtitle": "Don't miss out on these amazing deals!",
-    "viewAll": "View All Offers",
-    "addToCart": "Add to Cart"
-  },
-  "services": {
-    "title": "Our Comprehensive Services",
-    "items": [
-      {
-        "title": "Groceries",
-        "description": "Fresh and quality grocery items for your daily needs"
-      },
-      {
-        "title": "Detergents",
-        "description": "Wide selection of cleaning and laundry products"
-      },
-      {
-        "title": "Bakery",
-        "description": "Fresh bread and pastries baked daily"
-      },
-      {
-        "title": "Bill Payments",
-        "description": "Convenient bill payment services"
-      },
-      {
-        "title": "Wholesale Deals",
-        "description": "Special prices for bulk purchases"
-      },
-      {
-        "title": "Free Local Delivery",
-        "description": "Free delivery within Al-Zahira area"
-      },
-      {
-        "title": "Damascus-wide Delivery",
-        "description": "City-wide delivery via Bee Order"
-      }
-    ]
-  },
-  "offers": {
-    "title": "Our Offers",
-    "subtitle": "Check out our latest deals and discounts!",
-    "hero": {
-      "title": "Weekly Offers",
-      "subtitle": "Discover the best exclusive offers and discounts"
-    },
-    "featured": {
-      "title": "Featured Products",
-      "items": [
-        { "name": "Canned Goods & Legumes" },
-        { "name": "Chips & Biscuits" },
-        { "name": "Dairy Products" },
-        { "name": "Detergents" },
-        { "name": "Baby Supplies" }
-      ]
-    },
-    "delivery": {
-      "title": "Free Delivery",
-      "description": "On all orders above 50,000 SYP within Al-Zahira and nearby areas."
-    },
-    "buy2get1": {
-      "title": "Buy 2 Get 1",
-      "description": "On all fresh bakery products. Mix & match your favorites!"
-    },
-    "discount15": {
-      "title": "15% Discount",
-      "description": "On all essential grocery items. Save more every week!"
-    },
-    "viewDetails": "View Details",
-    "limitedTime": "Limited Time!",
-    "joinWhatsApp": "Join Our Offers Group on WhatsApp",
-    "getOffer": "Get Offer",
-    "specialOffers": "Special Offers",
-    "subscribers": {
-      "title": "Special Offers for Subscribers",
-      "subtitle": "Subscribe to our newsletter and get exclusive offers and priority notifications",
-      "emailPlaceholder": "Email address",
-      "subscribe": "Subscribe"
-    },
-    "detergents": {
-      "title": "20% Off All Detergents",
-      "description": "Special discount on all types of detergents and liquid cleaners",
-      "validUntil": "Valid until Dec 31",
-      "category": "Detergents"
-    },
-    "bakery": {
-      "title": "Buy 2 Get 1 Free",
-      "description": "On all fresh bakery products",
-      "validUntil": "Valid until Jan 15",
-      "category": "Bakery"
-    },
-    "groceries": {
-      "title": "15% Off Groceries",
-      "description": "Discount on all essential grocery items",
-      "validUntil": "Valid until Jan 20",
-      "category": "Groceries"
-    },
-    "delivery": {
-      "title": "Free Delivery on Large Orders",
-      "description": "Free delivery for orders over 50,000 SYP",
-      "validUntil": "Ongoing",
-      "category": "Delivery"
-    }
-  },
-  "contact": {
-    "title": "Get in Touch",
-    "address": "Al-Zahira, Damascus, Syria",
-    "phone": "+963945712929",
-    "hours": "Sat - Thu: 10:00 AM - 11:00 PM | Fri: 4:00 PM - 11:00 PM",
-    "social": {
-      "whatsapp": "Chat on WhatsApp",
-      "facebook": "Follow us on Facebook",
-      "instagram": "Follow us on Instagram"
-    }
-  },
-  "footer": {
-    "copyright": "© 2024 Farhat Savings Center. All rights reserved.",
-    "offers": "Offers",
-    "about": "About",
-    "contact": "Contact"
-  },
-  "chooseUs": {
-    "title": "Why Choose Us?",
-    "quality": {
-      "title": "Guaranteed Quality",
-      "description": "We carefully select our products to ensure you always get the best."
-    },
-    "savings": {
-      "title": "Great Savings",
-      "description": "We offer the best competitive prices in the area for real savings on every purchase."
-    },
-    "service": {
-      "title": "Excellent Service",
-      "description": "From fast delivery to bill payments, we are here to make your life easier."
-    }
-  },
- 
-  "products": [
-    {
-      "id": "prod_1",
-      "beeOrderId": "570110",
-      "name": "Torabika Cappuccino",
-      "description": "A mix of instant coffee, cream, and sugar. Sprinkle chocolate granules over the cappuccino foam.",
-      "image": "/torabika.jpeg",
-      "old_price": "SYP 3,499",
-      "new_price": "SYP 2,999"
-      , "discount": "15%"
-    },
-    {
-      "id": "prod_2",
-      "beeOrderId": "579772",
-      "name": "Blue Al-Shami Coffee 500g",
-      "description": "The world's best-selling coffee, enhanced with extra green cardamom.",
-      "image": "/alshami_coffee.jpeg",
-      "old_price": "SYP 79,999",
-      "new_price": "SYP 73,999"
-         , "discount": "22%"
-    },
-    {
-      "id": "prod_3",
-      "beeOrderId": "571890",
-      "name": "Master Chips Large",
-      "description": "Enjoy a snack with Master Chips Large, spicy and seasoned 180g! These crispy chips have a delicious flavor that will leave you wanting more.",
-      "image": "/master.jpeg",
-      "old_price": "SYP 14,999",
-      "new_price": "SYP 10,999"
-         , "discount": "24%"
-    },
-    {
-      "id": "prod_4",
-      "beeOrderId": "571149",
-      "name": "Milka Chocolate",
-      "description": "A wide range of flavors is available, including Alpine milk chocolate, Oreo, caramel, strawberry, and hazelnut.",
-      "image": "/melka.jpeg",
-      "old_price": "SYP 14,999",
-      "new_price": "SYP 10,999"
-         , "discount": "18%"
-    },
-    {
-      "id": "prod_5",
-      "beeOrderId": "453702",
-      "name": "Let's Red Detergent Powder",
-      "description": "Let's Clean laundry powder contains advanced enzyme power that cleans and removes stubborn stains from your clothes, with a long-lasting fresh scent.",
-      "image": "/lets.jpeg",
-      "old_price": "SYP 56,999",
-      "new_price": "SYP 52,499"
-         , "discount": "25%"
-    },
-    {
-      "id": "prod_6",
-      "beeOrderId": "453958",
-      "name": "Carmel Freshener",
-      "description": "Its new and advanced formula disinfects all parts of the home, from tiles and walls to bathrooms and kitchens, eliminating 99.9% of germs.",
-      "image": "/carmel.jpeg",
-      "old_price": "SYP 15,999",
-      "new_price": "SYP 10,499"
-         , "discount": "15%"
-    },
-    {
-      "id": "prod_7",
-      "beeOrderId": "571531",
-      "name": "Al-Taghzia Beef Mortadella",
-      "description": "Made from high-quality beef, perfect for sandwiches and quick meals for the whole family.",
-      "image": "/tagzea.jpeg",
-      "old_price": "SYP 15,499",
-      "new_price": "SYP 12,499"
-         , "discount": "10%"
-    },
-       {
-      "id": "prod_8",
-      "beeOrderId": "570303",
-      "name": "Salvito Tea Biscuits Offer - 6 Packs",
-      "image": "/offer/selvito_offer.png",
-      "old_price": "SYP 15,499",
-      "new_price": "SYP 8,499",
-      "discount1": "20%"
-    },
-    {
-      "id": "prod_9",
-      "beeOrderId": "577480",
-      "name": "Ghouta ketchup with barbecue sauce for free",
-      "image": "/offer/alghota-sauce-offer.png.jpg",
-      "old_price": "SYP 30,999",
-      "new_price": "SYP 14,499",
-      "discount1": "24%"
-    }
-  ],
-  "beeOrder": {
-    "priceLabel": "Price via Bee Order (includes 10% commission)",
-    "orderBtn": "Order via Bee Order"
-  },
   "about": {
     "title": "Our Story in the Heart of Damascus",
     "content": "Located in the vibrant neighborhood of Al-Zahira, Farhat Savings Center has been serving our community with quality groceries, fresh detergents, and delicious bakery items. We also provide convenient bill payment services and accept card payments through Fattoura. Our commitment to quality and savings makes us your trusted partner for all your daily needs.",
@@ -259,34 +27,18 @@
     },
     "mission": {
       "title": "Our Mission",
-      "description": "To provide high-quality products and excellent services at competitive prices, with a focus on customer satisfaction and the development of our local community."
+      "description": "To provide high-quality products and excellent services at competitive prices..."
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To be the first choice for shopping in the Al-Zahira area, known for our product quality and excellent customer service."
+      "description": "To be the first choice for shopping in the Al-Zahira area, known for our product quality..."
     },
     "values": {
       "title": "Our Values",
       "subtitle": "The values that guide our business and customer relationships",
-      "quality": {
-        "title": "Quality",
-        "description": "We are committed to providing the best products and services to our customers"
-      },
-      "reliability": {
-        "title": "Reliability",
-        "description": "Our customers trust us to meet their daily needs"
-      },
-      "excellence": {
-        "title": "Excellence",
-        "description": "We always strive for excellence in everything we do"
-      }
-    },
-    "stats": {
-      "title": "Our Statistics",
-      "experience": "Years of Experience",
-      "customers": "Happy Customers",
-      "products": "Diverse Products",
-      "service": "Customer Service"
+      "quality": { "title": "Quality", "description": "We are committed to providing the best products and services" },
+      "reliability": { "title": "Reliability", "description": "Our customers trust us to meet their daily needs" },
+      "excellence": { "title": "Excellence", "description": "We always strive for excellence in everything we do" }
     },
     "departments": {
       "title": "Our Departments",
@@ -298,11 +50,87 @@
       "snacks": "Snacks"
     }
   },
+  "weeklyOffersSection": {
+    "title": "Our Special Offers This Week",
+    "subtitle": "Don't miss out on these amazing deals!",
+    "viewAll": "View All Offers"
+  },
+  "services": {
+    "title": "Our Comprehensive Services",
+    "items": [
+      { "title": "Groceries", "description": "Fresh and quality grocery items for your daily needs" },
+      { "title": "Detergents", "description": "Wide selection of cleaning and laundry products" },
+      { "title": "Bakery", "description": "Fresh bread and pastries baked daily" },
+      { "title": "Bill Payments", "description": "Convenient bill payment services" },
+      { "title": "Wholesale Deals", "description": "Special prices for bulk purchases" },
+      { "title": "Free Local Delivery", "description": "Free delivery within Al-Zahira area" },
+      { "title": "Damascus-wide Delivery", "description": "City-wide delivery via Bee Order" }
+    ]
+  },
+  "offers": {
+    "title": "Our Offers",
+    "subtitle": "Check out our latest deals and discounts!",
+    "featured": {
+      "title": "Featured Products"
+    },
+    "delivery": {
+      "title": "Free Delivery",
+      "description": "On all orders above 50,000 SYP within Al-Zahira and nearby areas."
+    },
+    "buy2get1": {
+      "title": "Buy 2 Get 1",
+      "description": "On all fresh bakery products. Mix & match your favorites!"
+    },
+    "discount15": {
+      "title": "15% Discount",
+      "description": "On all essential grocery items. Save more every week!"
+    },
+    "viewDetails": "View Details",
+    "joinWhatsApp": "Join Our Offers Group on WhatsApp"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "address": "Al-Zahira, Damascus, Syria",
+    "phone": "+963945712929",
+    "hours": "Sat - Thu: 10:00 AM - 11:00 PM | Fri: 4:00 PM - 11:00 PM",
+    "social": {
+      "whatsapp": "Chat on WhatsApp",
+      "facebook": "Follow us on Facebook",
+      "instagram": "Follow us on Instagram"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Farhat Savings Center. All rights reserved.",
+    "careers": "Careers",
+    "offers": "Offers",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "chooseUs": {
+    "title": "Why Choose Us?",
+    "quality": { "title": "Guaranteed Quality", "description": "We carefully select our products to ensure you always get the best." },
+    "savings": { "title": "Great Savings", "description": "We offer the best competitive prices in the area." },
+    "service": { "title": "Excellent Service", "description": "From fast delivery to bill payments, we are here to make your life easier." }
+  },
   "weeklyOffers": [
-    { "id": "offer_1", "name": "Laktima Jell-O Offer: 2 + 1 Free", "image": "/offer-main/laktima-offer.png.jpg", "old_price": "14,999 SYP", "new_price": "11,999 SYP", "discount": "20%"  ,   "beeOrderId": "452766"  },
-    { "id": "offer_2", "name": "Al Ghoota Tomato Paste + Free Garlic Pickles", "image": "/offer-main/alghota-offer.png.jpg", "old_price": "40,999 SYP", "new_price": "32,999 SYP", "discount": "20%" ,  "beeOrderId": "577480" },
-    { "id": "offer_3", "name": "Matiz Soap Offer - 6 Bars", "image": "/offer-main/matiz-offer.png", "old_price": "19,999 SYP", "new_price": "16,499 SYP", "discount": "33%",  "beeOrderId": "588547" },
-    { "id": "offer_4", "name": "Zena Mortadella Offer + Free Hot Dogs", "image": "/offer-main/zena-offer.png.jpg", "old_price": "28,499 SYP", "new_price": "23,499 SYP", "discount": "20%",  "beeOrderId": "577490" }
-      ]
-      
+    { "id": "offer_1", "name": "Laktima Jell-O Offer: 2 + 1 Free", "image": "/offer-main/laktima-offer.png.jpg", "old_price": "14,999 SYP", "new_price": "11,999 SYP", "discount": "20%", "beeOrderId": "452766" },
+    { "id": "offer_2", "name": "Al Ghoota Tomato Paste + Free Garlic Pickles", "image": "/offer-main/alghota-offer.png.jpg", "old_price": "40,999 SYP", "new_price": "32,999 SYP", "discount": "20%", "beeOrderId": "577480" },
+    { "id": "offer_3", "name": "Matiz Soap Offer - 6 Bars", "image": "/offer-main/matiz-offer.png", "old_price": "19,999 SYP", "new_price": "16,499 SYP", "discount": "33%", "beeOrderId": "588547" },
+    { "id": "offer_4", "name": "Zena Mortadella Offer + Free Hot Dogs", "image": "/offer-main/zena-offer.png.jpg", "old_price": "28,499 SYP", "new_price": "23,499 SYP", "discount": "20%", "beeOrderId": "577490" }
+  ],
+  "products": [
+    { "id": "prod_1", "beeOrderId": "570110", "name": "Torabika Cappuccino", "description": "A mix of instant coffee, cream, and sugar...", "image": "/torabika.jpeg", "old_price": "SYP 3,499", "new_price": "SYP 2,999", "discount": "15%" },
+    { "id": "prod_2", "beeOrderId": "579772", "name": "Blue Al-Shami Coffee 500g", "description": "The world's best-selling coffee, enhanced with extra green cardamom.", "image": "/alshami_coffee.jpeg", "old_price": "SYP 79,999", "new_price": "SYP 73,999", "discount": "22%" },
+    { "id": "prod_3", "beeOrderId": "571890", "name": "Master Chips Large", "description": "Enjoy a snack with Master Chips Large, spicy and seasoned...", "image": "/master.jpeg", "old_price": "SYP 14,999", "new_price": "SYP 10,999", "discount": "24%" },
+    { "id": "prod_4", "beeOrderId": "571149", "name": "Milka Chocolate", "description": "A wide range of flavors is available...", "image": "/melka.jpeg", "old_price": "SYP 14,999", "new_price": "SYP 10,999", "discount": "18%" },
+    { "id": "prod_5", "beeOrderId": "453702", "name": "Let's Red Detergent Powder", "description": "Let's Clean laundry powder contains advanced enzyme power...", "image": "/lets.jpeg", "old_price": "SYP 56,999", "new_price": "SYP 52,499", "discount": "25%" },
+    { "id": "prod_6", "beeOrderId": "453958", "name": "Carmel Freshener", "description": "Its new and advanced formula disinfects all parts of the home...", "image": "/carmel.jpeg", "old_price": "SYP 15,999", "new_price": "SYP 10,499", "discount": "15%" },
+    { "id": "prod_7", "beeOrderId": "571531", "name": "Al-Taghzia Beef Mortadella", "description": "Made from high-quality beef, perfect for sandwiches...", "image": "/tagzea.jpeg", "old_price": "SYP 15,499", "new_price": "SYP 12,499", "discount": "10%" },
+    { "id": "prod_8", "beeOrderId": "570303", "name": "Salvito Tea Biscuits Offer - 6 Packs", "image": "/offer/selvito_offer.png", "old_price": "SYP 15,499", "new_price": "SYP 8,499", "discount": "20%" },
+    { "id": "prod_9", "beeOrderId": "577480", "name": "Ghouta ketchup with barbecue sauce for free", "image": "/offer/alghota-sauce-offer.png.jpg", "old_price": "SYP 30,999", "new_price": "SYP 14,499", "discount": "24%" }
+  ],
+  "beeOrder": {
+    "priceLabel": "Price via Bee Order (includes 10% commission)",
+    "orderBtn": "Order via Bee Order"
+  }
 }

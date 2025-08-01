@@ -91,10 +91,10 @@ export default function EnglishPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Our Special Offers This Week
+              {t.weeklyOffersSection.title}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Don't miss out on these amazing deals!
+             {t.weeklyOffersSection.subtitle}
             </p>
           </div>
           
@@ -155,7 +155,7 @@ export default function EnglishPage() {
               href="/en/offers"
               className="inline-flex items-center btn-secondary bg-primary-600 hover:bg-primary-700 text-white border-primary-600"
             >
-              View All Offers
+              {t.weeklyOffersSection.viewAll}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
