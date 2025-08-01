@@ -15,7 +15,7 @@ export function FeaturedProducts() {
     <section className="py-8 bg-white dark:bg-gray-900">
       <div className="container-custom">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gradient">{sectionTitle}</h2>
-        <div className="overflow-x-auto scrollbar-hide">
+        <div className="overflow-y-auto scrollbar-hide">
           <div className="flex gap-6 min-w-[600px] md:min-w-0">
             {t.products?.map((product: any, idx: number) => (
               <motion.div

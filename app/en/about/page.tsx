@@ -41,28 +41,7 @@ export default function AboutPage() {
     }
   ]
 
-  const stats = [
-    {
-      number: '15+',
-      label: 'Years of Experience',
-      icon: Clock
-    },
-    {
-      number: '10,000+',
-      label: 'Happy Customers',
-      icon: Users
-    },
-    {
-      number: '500+',
-      label: 'Diverse Products',
-      icon: ShoppingCart
-    },
-    {
-      number: '24/7',
-      label: 'Customer Service',
-      icon: Star
-    }
-  ]
+ 
 
   return (
     <div className="min-h-screen" dir={dir}>
@@ -169,33 +148,6 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400">
                   {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {'Our Statistics'}
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary-600 dark:text-primary-400" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  {stat.number}
-                </div>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {stat.label}
                 </p>
               </div>
             ))}

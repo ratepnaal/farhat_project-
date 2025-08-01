@@ -21,46 +21,6 @@ export default function OffersPage() {
   const locale: Locale = 'ar'
   const t = getTranslations(locale)
   const { onOpen } = useProductModal()
-
-  const offers = [
-    {
-      id: 1,
-      title: 'خصم 20% على جميع المنظفات',
-      description: 'خصم خاص على جميع أنواع المنظفات والمنظفات السائلة',
-      discount: '20%',
-      validUntil: 'ينتهي في 31 ديسمبر',
-      category: 'منظفات',
-      icon: ShoppingCart
-    },
-    {
-      id: 2,
-      title: 'شراء 2 واحصل على 1 مجاناً',
-      description: 'على جميع منتجات المخبز الطازجة',
-      discount: '33%',
-      validUntil: 'ينتهي في 15 يناير',
-      category: 'مخبز',
-      icon: Star
-    },
-    {
-      id: 3,
-      title: 'خصم 15% على المواد الغذائية',
-      description: 'خصم على جميع المواد الغذائية الأساسية',
-      discount: '15%',
-      validUntil: 'ينتهي في 20 يناير',
-      category: 'مواد غذائية',
-      icon: Percent
-    },
-    {
-      id: 4,
-      title: 'توصيل مجاني للطلبات الكبيرة',
-      description: 'توصيل مجاني للطلبات التي تزيد عن 50,000 ليرة',
-      discount: '100%',
-      validUntil: 'مستمر',
-      category: 'توصيل',
-      icon: ShoppingCart
-    }
-  ]
-
   const products = t.products
 
   const handleProductClick = (product: any) => {
@@ -132,10 +92,10 @@ export default function OffersPage() {
                     />
                     
                     {/* Discount Badge */}
-                    {product?.discount && (
+                    {product?.discount1 && (
                       <div className="absolute top-3 left-3">
                         <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          -{product?.discount}
+                          -{product?.discount1}
                         </div>
                       </div>
                     )}
@@ -153,9 +113,9 @@ export default function OffersPage() {
                         {product.new_price}
                       </span>
                       {product.old_price && (
-                        <span className="text-lg text-gray-400 line-through">
+                      <span className="text-lg text-gray-400 line-through">
                           {product.old_price}
-                        </span>
+                      </span>
                       )}
                     </div>
                     

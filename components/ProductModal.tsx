@@ -145,7 +145,7 @@ export function ProductModal() {
 
               {/* Bee Order Button */}
               <a
-                href={`https://beeorder.com/sy/farhat-center/product/${product.id}`}
+                href={`https://beeorder.com/app?screen=dish&dd=${product.beeOrderId}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-4 px-6 rounded-lg text-center block transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"

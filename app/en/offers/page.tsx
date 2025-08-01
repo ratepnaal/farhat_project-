@@ -20,46 +20,7 @@ import Image from 'next/image'
 export default function OffersPage() {
   const locale: Locale = 'en'
   const t = getTranslations(locale)
-  const { onOpen } = useProductModal()
-
-  const offers = [
-    {
-      id: 1,
-      title: '20% Off All Detergents',
-      description: 'Special discount on all types of detergents and liquid cleaners',
-      discount: '20%',
-      validUntil: 'Valid until Dec 31',
-      category: 'Detergents',
-      icon: ShoppingCart
-    },
-    {
-      id: 2,
-      title: 'Buy 2 Get 1 Free',
-      description: 'On all fresh bakery products',
-      discount: '33%',
-      validUntil: 'Valid until Jan 15',
-      category: 'Bakery',
-      icon: Star
-    },
-    {
-      id: 3,
-      title: '15% Off Groceries',
-      description: 'Discount on all essential grocery items',
-      discount: '15%',
-      validUntil: 'Valid until Jan 20',
-      category: 'Groceries',
-      icon: Percent
-    },
-    {
-      id: 4,
-      title: 'Free Delivery on Large Orders',
-      description: 'Free delivery for orders over 50,000 SYP',
-      discount: '100%',
-      validUntil: 'Ongoing',
-      category: 'Delivery',
-      icon: ShoppingCart
-    }
-  ]
+  const { onOpen } = useProductModal();
 
   const products = t.products
 
@@ -154,9 +115,9 @@ export default function OffersPage() {
                         {product.new_price}
                       </span>
                       {product.old_price && (
-                        <span className="text-gray-500 dark:text-gray-400 line-through text-sm ms-2">
+                      <span className="text-gray-500 dark:text-gray-400 line-through text-sm ms-2">
                           {product.old_price}
-                        </span>
+                      </span>
                       )}
                     </div>
                     

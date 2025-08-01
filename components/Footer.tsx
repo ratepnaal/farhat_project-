@@ -70,14 +70,6 @@ export function Footer({ locale }: FooterProps) {
                   {locale === 'ar' ? 'من نحن' : 'About Us'}
                 </Link>
               </li>
-              <li>
-                <Link 
-                  href={locale === 'ar' ? '/ar/careers' : '/en/careers'} 
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-200 flex items-center"
-                >
-                  {locale === 'ar' ? 'الوظائف' : 'Careers'}
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -147,7 +139,7 @@ export function Footer({ locale }: FooterProps) {
             {/* Social Media Icons */}
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
               <a
-                href="https://wa.me/963111234567"
+                href="https://wa.me/963945712929"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-200 p-2 rounded-full hover:bg-gray-700"
@@ -156,7 +148,7 @@ export function Footer({ locale }: FooterProps) {
                 <MessageCircle className="w-6 h-6" />
               </a>
               <a
-                href="https://facebook.com/farhatsavingscenter"
+                href="https://www.facebook.com/share/1CADmnTnuq/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-200 p-2 rounded-full hover:bg-gray-700"
@@ -165,7 +157,7 @@ export function Footer({ locale }: FooterProps) {
                 <Facebook className="w-6 h-6" />
               </a>
               <a
-                href="https://instagram.com/farhatsavingscenter"
+                href="https://www.instagram.com/market_farhat1?igsh=ZHpzY254NTFyNDUx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-200 p-2 rounded-full hover:bg-gray-700"

@@ -47,7 +47,8 @@ export function Navbar({ locale }: NavbarProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center">
+
+            <div className="hidden md:flex items-center"> 
               <Link
                 href={locale === 'ar' ? '/ar' : '/en'}
                 className={`transition-colors duration-200 me-4 ${
@@ -93,7 +94,7 @@ export function Navbar({ locale }: NavbarProps) {
             {/* Desktop Controls */}
             <div className="hidden md:flex items-center gap-x-4">
               <a
-                href="https://beeorder.com/sy/farhat-center"
+                href="https://beeorder.com/app?screen=market&rest=4160"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm px-4 py-2"
@@ -188,7 +189,7 @@ function MobileMenuOverlay({ closeMenu, locale, t, isActive }: { closeMenu: () =
           {t.nav.contact}
         </Link>
         <a
-          href="https://beeorder.com/sy/farhat-center"
+          href="https://beeorder.com/app?screen=market&rest=4160"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 px-6 py-3 border border-primary-600 dark:border-primary-400 rounded-lg text-primary-600 dark:text-primary-400 bg-transparent hover:bg-primary-50 dark:hover:bg-primary-900/10 transition-colors duration-200 text-xl font-medium"

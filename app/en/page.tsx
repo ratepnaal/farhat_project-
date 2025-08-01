@@ -20,11 +20,11 @@ import {
   ArrowRight
 } from 'lucide-react'
 import { FeaturedProducts } from '@/components/FeaturedProducts'
-
+import { useProductModal } from '@/hooks/use-product-modal'
 export default function EnglishPage() {
   const locale: Locale = 'en'
   const t = getTranslations(locale)
-
+  const {onOpen} = useProductModal();
   const services = [
     { icon: ShoppingCart, title: t.services.items[0].title, description: t.services.items[0].description },
     { icon: Droplets, title: t.services.items[1].title, description: t.services.items[1].description },
@@ -98,56 +98,57 @@ export default function EnglishPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {weeklyOffers.map((offer) => (
-              <div
-                key={offer.id}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 group"
-              >
-                {/* Product Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={offer.image}
-                    alt={offer.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    quality={75}
-                  />
-                  <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
-                    {offer.discount}
-                  </div>
-                </div>
-
-                {/* Product Info */}
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                    {offer.name}
-                  </h3>
-                  
-                                      <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                          {offer.old_price}
-                        </span>
-                        <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                          {offer.new_price}
-                        </span>
-                      </div>
-                    </div>
-
-                  <a
-                    href={`https://wa.me/963945712929?text=Hello, I would like to order the offer: ${encodeURIComponent(offer.name)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center"
-                  >
-                    Order Now
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+         {weeklyOffers.map((offer) => (
+           <div
+             key={offer.id}
+             className="offer-card group overflow-hidden cursor-pointer" // <-- أضفنا cursor-pointer
+             onClick={() => onOpen({ 
+               id: offer.id,
+               name: offer.name,
+               image: offer.image,
+               altText: offer.name,
+               description: `A special offer from Farhat Center for Savings. Available for a limited time!`,
+               old_price: offer.old_price,
+               new_price: offer.new_price
+             })}
+           >
+             {/* Product Image */}
+             <div className="relative h-48 overflow-hidden">
+               <Image
+                 src={offer.image}
+                 alt={offer.name}
+                 fill
+                 className="object-cover group-hover:scale-105 transition-transform duration-300"
+                 quality={75}
+               />
+               <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
+                 {offer.discount}
+               </div>
+             </div>
+       
+             {/* Product Info */}
+             <div className="p-4">
+               <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+                 {offer.name}
+               </h3>
+               
+               <div className="flex items-center justify-between">
+                 <div className="flex items-center space-x-2">
+                   <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
+                     {offer.old_price}
+                   </span>
+                   <span className="text-green-600 dark:text-green-400 font-bold text-lg">
+                     {offer.new_price}
+                   </span>
+                 </div>
+               </div>
+       
+                       </div>
+                     </div>
+                   ))}
+                 </div>
+       
           {/* View All Offers Button */}
           <div className="text-center">
             <Link

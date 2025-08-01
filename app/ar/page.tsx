@@ -21,13 +21,11 @@ import {
 } from 'lucide-react'
 import { FeaturedProducts } from '@/components/FeaturedProducts'
 import { motion } from 'framer-motion'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import offer1 from '@/public/offer-main/laktima-offer.png.jpg'
-import offer2 from '@/public/offer-main/alghota-offer.png.jpg'
-import offer3 from '@/public/offer-main/matiz-offer.png'
-import offer4 from '@/public/offer-main/zena-offer.png.jpg'
+import { useProductModal } from '@/hooks/use-product-modal'
+
 export default function ArabicPage() {
   const locale: Locale = 'ar'
+  const { onOpen } = useProductModal();
   const t = getTranslations(locale)
 
   const services = [
@@ -96,67 +94,59 @@ export default function ArabicPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              {t.weeklyOffers.title}
+              {t.weeklyOffersSection.title}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              {t.weeklyOffers.subtitle}
+              {t.weeklyOffersSection.subtitle}
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {weeklyOffers.map((offer) => (
-              <div
-                key={offer.id}
-                className="offer-card group overflow-hidden"
-              >
-                {/* Product Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={offer.image}
-                    alt={offer.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    quality={75}
-                  />
-                  <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
-                    {offer.discount}
-                  </div>
-                </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+  {weeklyOffers.map((offer) => (
+    <div
+      key={offer.id}
+      className="offer-card group overflow-hidden cursor-pointer" // <-- أضفنا cursor-pointer
+      onClick={() => onOpen({ 
+        id: offer.id,
+        name: offer.name,
+        image: offer.image,
+        altText: offer.name,
+        description: `عرض مميز من سنتر فرحات للتوفير. متوفر لفترة محدودة!`,
+        old_price: offer.old_price,
+        new_price: offer.new_price
+      })}
+    >
+      {/* Product Image */}
+      <div className="relative h-48 overflow-hidden">
+        <Image
+          src={offer.image}
+          alt={offer.name}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          quality={75}
+        />
+        <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-sm font-bold">
+          {offer.discount}
+        </div>
+      </div>
 
-                {/* Product Info */}
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-                    {offer.name}
-                  </h3>
-                  
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
-                        {offer.old_price}
-                      </span>
-                      <span className="text-green-600 dark:text-green-400 font-bold text-lg">
-                        {offer.new_price}
-                      </span>
-                    </div>
-                  </div>
+      {/* Product Info */}
+      <div className="p-4">
+        <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
+          {offer.name}
+        </h3>
+        
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-gray-500 dark:text-gray-400 line-through text-sm">
+              {offer.old_price}
+            </span>
+            <span className="text-green-600 dark:text-green-400 font-bold text-lg">
+              {offer.new_price}
+            </span>
+          </div>
+        </div>
 
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <button className="w-full mt-4 btn-primary text-sm py-2 inline-block text-center">اطلب العرض الآن</button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                      <DropdownMenuItem asChild>
-                        <a href={`https://wa.me/963945712929?text=مرحباً، أرغب بالاستفسار عن عرض: ${encodeURIComponent(offer.name)}`} target="_blank" rel="noopener noreferrer">
-                          الطلب عبر واتساب
-                        </a>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <a href={`https://beeorder.com/sy/farhat-center/product/${offer.id}`} target="_blank" rel="noopener noreferrer">
-                          الطلب عبر بي أوردر (+9% عمولة)
-                        </a>
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
                 </div>
               </div>
             ))}
@@ -169,7 +159,7 @@ export default function ArabicPage() {
               className="inline-flex items-center btn-secondary bg-primary-600 hover:bg-primary-700 text-white border-primary-600"
             >
               <ArrowLeft className="w-5 h-5 ml-2" />
-              {t.weeklyOffers.viewAll}
+              {t.weeklyOffersSection.viewAll}
             </Link>
           </div>
         </div>
@@ -205,32 +195,7 @@ export default function ArabicPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gradient">
-            {t.testimonials.title}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.testimonials.reviews.map((review: any, idx: number) => (
-              <div key={idx} className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                {/* Review Content */}
-                <div className="text-center">
-                  <p className="text-base md:text-lg text-gray-700 dark:text-gray-200 mb-4">{review.quote}</p>
-                  <div className="flex items-center justify-center mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-lg md:text-xl">★</span>
-                    ))}
-                  </div>
-                  <strong className="block text-primary-700 dark:text-primary-300">{review.name}</strong>
-                  <p className="text-xs text-gray-500 mt-1">{review.context}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+     
       {/* Contact Section */}
       <section id="contact" className="section-padding">
         <div className="container-custom">
@@ -284,7 +249,7 @@ export default function ArabicPage() {
                   </a>
                   
                   <a
-                    href="https://facebook.com/farhatsavingscenter"
+                    href="https://www.facebook.com/share/1CADmnTnuq/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-x-3 p-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
@@ -294,7 +259,7 @@ export default function ArabicPage() {
                   </a>
                   
                   <a
-                    href="https://instagram.com/farhatsavingscenter"
+                    href="https://www.instagram.com/market_farhat1?igsh=ZHpzY254NTFyNDUx"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-x-3 p-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg transition-colors duration-200"
