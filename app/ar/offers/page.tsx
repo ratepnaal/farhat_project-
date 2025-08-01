@@ -25,10 +25,12 @@ export default function OffersPage() {
 
   const handleProductClick = (product: any) => {
     const modalProduct = {
+      beeOrderId: product.beeOrderId,
+      id: product.id,
       name: product.name,
       image: product.image,
       altText: product.name,
-      description: `مميز من مركز فرحات للتوفير. متوفر الآن.`,
+     description: product.description,
       old_price: product.old_price,
       new_price: product.new_price,
     };
